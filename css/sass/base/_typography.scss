@@ -1,0 +1,155 @@
+.entete {
+    &_titre h1 {
+        font-family: DM Sans;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 47px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #D04F4F;
+    }
+
+    &_searchInput {
+        .globalSearch {
+            background: #E7E7E7;
+            font-family: Lato;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: left;
+            padding-left: 24px;
+            margin: 20px 0;
+            border: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+.container {
+    .dropdown {
+        font-family: Lato;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0em;
+        color: white;
+
+        &_ingredients {
+            background: #3282F7;
+
+            .ingredientSearch {
+                background: #3282F7;
+                border: none;
+                padding: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                color: white;
+                font-family: Lato;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 22px;
+                letter-spacing: 0em;
+
+                &:focus {
+                    outline: none;
+                    color: white;
+                }
+
+                &::placeholder {
+                    color: white;
+                    font-family: Lato;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 22px;
+                    letter-spacing: 0em;
+                    text-align: center;
+
+                }
+
+            }
+        }
+
+        &_appliance {
+            background: #68D9A4;
+
+            .applianceSearch {
+                background: #68D9A4;
+                border: none;
+                padding: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                color: white;
+                font-family: Lato;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 22px;
+                letter-spacing: 0em;
+
+                &:focus {
+                    outline: none;
+                    color: white;
+                }
+
+                &::placeholder {
+                    color: white;
+                    font-family: Lato;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 22px;
+                    letter-spacing: 0em;
+                    text-align: center;
+
+                }
+
+            }
+        }
+
+        &_ustensils {
+            background: #ED6454;
+
+            .ustensilSearch {
+                background: #ED6454;
+                border: none;
+                padding: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                color: white;
+                font-family: Lato;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 22px;
+                letter-spacing: 0em;
+
+                &:focus {
+                    outline: none;
+                    color: white;
+                }
+
+                &::placeholder {
+                    color: white;
+                    font-family: Lato;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 22px;
+                    letter-spacing: 0em;
+                    text-align: center;
+
+                }
+
+            }
+        }
+    }
+}

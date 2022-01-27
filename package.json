@@ -6,6 +6,10 @@
   "scripts": {
     "sass": "sass --watch ./css/sass/main.scss:./css/style.css"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021.git"
+  },
   "keywords": [
     "openclassrooms",
     "front-end",

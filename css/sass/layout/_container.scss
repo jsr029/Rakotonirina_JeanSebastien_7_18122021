@@ -1,0 +1,87 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .dropdown {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+
+        h2 {
+            padding: 24px 0 24px 10px;
+            text-align: left;
+            display: flex;
+        }
+
+        i {
+            position: absolute;
+            right: 15px;
+        }
+
+        &_ingredients, &_appliance, &_ustensils{
+            min-width: 200px;
+
+        }
+
+        &_ingredients,
+        &_appliance,
+        &_ustensils {
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            position: relative;
+        }
+        &_ingredients{
+            &-input{
+                display: none;
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                .ingredientSearch{
+                    display: none;
+                }
+                .fa-angle-down{
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                }
+            }
+        }
+        &_appliance{
+            &-input{
+                display: none;
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                .applianceSearch{
+                    display: none;
+                }
+                .fa-angle-down{
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                }
+            }
+        }        
+        &_ustensils{
+            &-input{
+                display: none;
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                .ustensilSearch{
+                    display: none;
+                }
+                .fa-angle-down{
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                }
+            }
+        }
+    }
+}
