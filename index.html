@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P7 Développer un algorithme de recherche en Js</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="entete">
+        <div class="entete_logo">
+            <img src="./img/Logo.png" alt="logo les petits plats">
+        </div>
+        <div class="entete_titre">Les petits plats</div>
+        <div class="entete_searchInput">
+            <input type="text" class="globalSearch" aria-label='recipes global search' placeholder="Rechercher un ingrédient, un appareil ou un ustensile...">
+        </div>
+    </header>
+    <main class="container">
+        <div class="underSearch">
+            <div class="underSearch_ingredientsTags"></div>
+            <div class="underSearch_applianceTags"></div>
+            <div class="underSearch_ustensilsTags"></div>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown_ingredients">
+                <div class="dropdown_ingredients-input">
+                    <input type="text" class="ingredientSearch" aria-label="search ingredients" placeholder="Rechercher un ingredient...">
+                </div>
+                <div class="dropdown_ingredients-list"></div>
+            </div>
+            <div class="dropdown_appliance">
+                <div class="dropdown_appliance-input">
+                    <input type="text" class="applianceSearch" aria-label="search appliance" placeholder="Rechercher un appareil...">
+                </div>
+                <div class="dropdown_appliance-list"></div>
+            </div>
+            <div class="dropdown_ustensils">
+                <div class="dropdown_ustensils-input">
+                    <input type="text" class="ustensilSearch" aria-label="search appliance" placeholder="Rechercher un ustensil... ">
+                </div>
+                <div class="dropdown_ustensils-list"></div>
+            </div>
+        </div>
+        <div class="recipes"></div>
+    </main>
+</body>
+</html>
