@@ -1,4 +1,5 @@
 import displayRecipes from "./displayRecipes.js";
+import displayMenu from './displayMenu.js';
 class globalSearch{
     render(recipes){
         let search = document.querySelector(".globalSearch");
@@ -41,10 +42,12 @@ class globalSearch{
             newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...descriptionResult, ...applianceResult, ...ustensilsResult])];
             newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
             new displayRecipes().render(newBaseFilteredConcated);
+            new displayMenu().render(newBaseFilteredConcated);
         });
         //Affiche les recettes par ordre alphabetique
         recepiesSort = recipes.sort((a, b) => b.name.localeCompare(a.name));
         new displayRecipes().render(recepiesSort);
+        new displayMenu().render(recepiesSort);
     }
 }
 export default globalSearch;

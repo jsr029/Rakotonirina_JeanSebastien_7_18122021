@@ -242,6 +242,16 @@ main {
   padding: 0;
   margin: 0;
   position: absolute;
+  z-index: 2000;
+}
+.container .dropdown_ingredients-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.container .dropdown_ingredients-list a {
+  width: 200px;
 }
 .container .dropdown h2 {
   padding: 24px 0 24px 10px;
