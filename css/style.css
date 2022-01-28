@@ -45,9 +45,10 @@ main {
 .entete {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+}
+.entete_logo {
+  text-align: center;
 }
 .entete_logo img {
   height: 46px;
@@ -55,20 +56,19 @@ main {
   border: none;
 }
 .entete_searchInput {
+  width: 95%;
   position: relative;
 }
 .entete_searchInput .globalSearch {
-  width: 1240px;
-  height: 69px;
+  width: 100%;
+  padding: 24px;
   border-radius: 5px;
 }
 .entete_searchInput i {
   position: absolute;
-  height: 52px;
-  width: 52px;
   font-size: 32px;
   top: 30%;
-  right: 5px;
+  right: -32px;
 }
 
 .entete_titre h1 {
@@ -136,7 +136,6 @@ main {
   font-weight: 700;
   line-height: 22px;
   letter-spacing: 0em;
-  text-align: center;
 }
 .container .dropdown_appliance {
   background: #68D9A4;
@@ -167,7 +166,6 @@ main {
   font-weight: 700;
   line-height: 22px;
   letter-spacing: 0em;
-  text-align: center;
 }
 .container .dropdown_ustensils {
   background: #ED6454;
@@ -198,7 +196,38 @@ main {
   font-weight: 700;
   line-height: 22px;
   letter-spacing: 0em;
-  text-align: center;
+}
+.container .recipes_bloc-img {
+  width: 380px;
+  height: 178px;
+  background: #C7BEBE;
+}
+.container .recipes_bloc-description {
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.container .recipes_bloc-ingredients {
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.container .recipes_bloc-titre h2 {
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .container {
@@ -212,12 +241,14 @@ main {
   column-gap: 20px;
   padding: 0;
   margin: 0;
-  width: 100%;
+  position: absolute;
 }
 .container .dropdown h2 {
   padding: 24px 0 24px 10px;
   text-align: left;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .container .dropdown i {
   position: absolute;
@@ -273,6 +304,46 @@ main {
   position: absolute;
   top: 5px;
   right: 5px;
+}
+.container .recipes {
+  margin-bottom: 50px;
+}
+.container .recipes_bloc {
+  position: relative;
+  overflow: hidden;
+}
+.container .recipes_bloc h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container .recipes_bloc-ingredients, .container .recipes_bloc-description {
+  width: 175px;
+  position: absolute;
+  padding: 10px;
+}
+.container .recipes_bloc-description {
+  right: 0;
+  padding: 10px;
+}
+.container .recipes_bloc-titre {
+  padding: 10px;
+}
+
+.recipes {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 150px;
+}
+.recipes .recipes_bloc {
+  max-width: 380px;
+  height: 364px;
 }
 
 /*# sourceMappingURL=style.css.map */

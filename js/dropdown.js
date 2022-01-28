@@ -16,7 +16,8 @@ let openIDrop = function (iClicked) {
     const dropIH2span = document.querySelector('.dropdown_ingredients h2 span');
     const dropIH2 = document.querySelector('.dropdown_ingredients h2');
     if (iClickedClassNameSplit == 'fa-angle-up') {
-        dropIngredients.style.display = 'flex';
+        dropIngredients.style.display = 'block';
+        dropIngredients.style.minWidth = '270px';
         iClicked.target.classList.remove('fa-angle-up');
         iClicked.target.classList.add('fa-angle-down');
         dropIH2span.style.display = 'none';
@@ -24,6 +25,7 @@ let openIDrop = function (iClicked) {
     }
     else if(iClickedClassNameSplit == 'fa-angle-down'){
         dropIngredients.style.display = 'none';
+        dropIngredients.style.minWidth = '200px';
         iClicked.target.classList.remove('fa-angle-down');
         iClicked.target.classList.add('fa-angle-up');
         dropIH2span.style.display = 'block';
@@ -38,7 +40,7 @@ let openADrop = function (aClicked) {
     const dropAH2span = document.querySelector('.dropdown_appliance h2 span');
     const dropAH2 = document.querySelector('.dropdown_appliance h2');
     if (aClickedClassNameSplit == 'fa-angle-up') {
-        dropAppliance.style.display = 'flex';
+        dropAppliance.style.display = 'block';
         aClicked.target.classList.remove('fa-angle-up');
         aClicked.target.classList.add('fa-angle-down');
         dropAH2span.style.display = 'none';
@@ -60,7 +62,7 @@ let openUDrop = function (uClicked) {
     const dropUH2span = document.querySelector('.dropdown_ustensils h2 span');
     const dropUH2 = document.querySelector('.dropdown_ustensils h2');
     if (uClickedClassNameSplit == 'fa-angle-up') {
-        dropUstensils.style.display = 'flex';
+        dropUstensils.style.display = 'block';
         uClicked.target.classList.remove('fa-angle-up');
         uClicked.target.classList.add('fa-angle-down');
         dropUH2span.style.display = 'none';

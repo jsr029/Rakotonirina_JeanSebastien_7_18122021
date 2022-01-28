@@ -9,12 +9,14 @@
         column-gap: 20px;
         padding: 0;
         margin: 0;
-        width: 100%;
+        position: absolute;
 
         h2 {
             padding: 24px 0 24px 10px;
             text-align: left;
             display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
 
         i {
@@ -22,7 +24,9 @@
             right: 15px;
         }
 
-        &_ingredients, &_appliance, &_ustensils{
+        &_ingredients,
+        &_appliance,
+        &_ustensils {
             min-width: 200px;
 
         }
@@ -35,52 +39,86 @@
             border-radius: 5px;
             position: relative;
         }
-        &_ingredients{
-            &-input{
+
+        &_ingredients {
+            &-input {
                 display: none;
                 display: flex;
                 flex-direction: row;
                 position: relative;
-                .ingredientSearch{
+
+                .ingredientSearch {
                     display: none;
                 }
-                .fa-angle-down{
+
+                .fa-angle-down {
                     position: absolute;
                     top: 5px;
                     right: 5px;
                 }
             }
         }
-        &_appliance{
-            &-input{
+
+        &_appliance {
+            &-input {
                 display: none;
                 display: flex;
                 flex-direction: row;
                 position: relative;
-                .applianceSearch{
+
+                .applianceSearch {
                     display: none;
                 }
-                .fa-angle-down{
+
+                .fa-angle-down {
                     position: absolute;
                     top: 5px;
                     right: 5px;
                 }
             }
-        }        
-        &_ustensils{
-            &-input{
+        }
+
+        &_ustensils {
+            &-input {
                 display: none;
                 display: flex;
                 flex-direction: row;
                 position: relative;
-                .ustensilSearch{
+
+                .ustensilSearch {
                     display: none;
                 }
-                .fa-angle-down{
+
+                .fa-angle-down {
                     position: absolute;
                     top: 5px;
                     right: 5px;
                 }
+            }
+        }
+    }
+
+    .recipes {
+        margin-bottom: 50px;
+        &_bloc {
+            position: relative;
+            overflow: hidden;
+            h2 {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            &-ingredients, &-description{
+                width: 175px;
+                position: absolute;
+                padding: 10px;
+            }
+            &-description{
+                right: 0;
+                padding: 10px;
+            }
+            &-titre{
+                padding: 10px;
             }
         }
     }
