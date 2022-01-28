@@ -1,6 +1,7 @@
+import removeArticles from './removeArticles.js';
 class displayRecipes {
     render(data) {
-        console.log(data);
+        removeArticles();
         data.sort(function(a, b){
             if(b.name < a.name) { return -1; }
             if(b.name > a.name) { return 1; }
