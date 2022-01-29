@@ -22,6 +22,17 @@ body {
 
 a {
   text-decoration: none;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  color: white;
+  margin-left: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 ul {
@@ -234,6 +245,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
+  /* Dropdown*/
 }
 .container .dropdown {
   display: flex;
@@ -243,14 +255,34 @@ main {
   margin: 0;
   position: absolute;
   z-index: 2000;
+  height: 70px;
+}
+.container .dropdown_ingredients h2 {
+  background: #3282F7;
+  border-radius: 5px;
 }
 .container .dropdown_ingredients-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: none;
+  grid-template-columns: repeat(3, 200px);
+  background: #3282F7;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .container .dropdown_ingredients-list a {
+  width: 200px;
+}
+.container .dropdown_appliance h2 {
+  background: #68D9A4;
+  border-radius: 5px;
+}
+.container .dropdown_appliance-list {
+  display: none;
+  grid-template-columns: repeat(3, 200px);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #68D9A4;
+}
+.container .dropdown_appliance-list a {
   width: 200px;
 }
 .container .dropdown h2 {
