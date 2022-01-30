@@ -39,7 +39,7 @@ class globalSearch{
                         }
                     }
                 }
-            newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...descriptionResult, ...applianceResult, ...ustensilsResult])];
+            newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...descriptionResult])];
             newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
             new displayRecipes().render(newBaseFilteredConcated);
             new displayMenu().render(newBaseFilteredConcated);
