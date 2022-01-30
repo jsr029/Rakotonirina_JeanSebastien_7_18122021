@@ -1,0 +1,64 @@
+.underSearch {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    margin-bottom: 10px;
+    column-gap: 10px;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    &_ingredientsTags {
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+        background: #3282F7;
+        padding: 5px;
+        border-radius: 5px;
+
+        .tagIngredients {
+            color: white;
+            margin-right: 8px;
+        }
+        i{
+            color: white;
+        }
+    }
+    &_applianceTags {
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+        background: #68D9A4;
+        padding: 5px;
+        border-radius: 5px;
+
+        .tagAppliance {
+            color: white;
+            margin-right: 8px;
+        }
+        i{
+            color: white;
+        }
+    }
+    &_ustensilsTags {
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+        background: #ED6454;
+        padding: 5px;
+        border-radius: 5px;
+
+        .tagUstensils {
+            color: white;
+            margin-right: 8px;
+        }
+        i{
+            color: white;
+        }
+    }
+}
