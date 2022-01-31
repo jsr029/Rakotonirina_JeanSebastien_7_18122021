@@ -4,7 +4,7 @@
 - Développer un algorithme pour résoudre un problème
 
 ## Algorigram
-see documentation [here](P7CreateResearchAlgo.html)
+see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/master/P7CreateResearchAlgo.html)
 
 ## Site
 see Demo [here](P7CreateResearchAlgo.html)
