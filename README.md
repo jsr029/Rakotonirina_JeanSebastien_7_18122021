@@ -1,5 +1,5 @@
 # Rakotonirina_JeanSebastien_7_18122021, Dev d'applications REACT/JS
-# P7 Développez un algorithme de recherche en javascript
+# OpenClassRooms : P7 Développez un algorithme de recherche en javascript
 - Analyser un problème informatique
 - Développer un algorithme pour résoudre un problème
 
