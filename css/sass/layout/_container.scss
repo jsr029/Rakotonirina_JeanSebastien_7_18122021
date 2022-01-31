@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-/* Dropdown*/
+
+    /* Dropdown*/
     .dropdown {
         display: flex;
         flex-direction: row;
@@ -11,62 +12,74 @@
         margin: 0;
         z-index: 2000;
         height: 35px;
+
         &_ingredients {
-            h2{
+            h2 {
                 background: #3282F7;
                 border-radius: 5px;
             }
+
             &-list {
                 display: none;
                 grid-template-columns: repeat(3, 200px);
                 background: #3282F7;
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
+
                 a {
                     width: 200px;
                     margin: 5px;
                 }
-                a:hover{
+
+                a:hover {
                     width: 180px;
                     background: lighten(#3282F7, 10%);
                 }
-           }
+            }
         }
+
         &_appliance {
-            h2{
+            h2 {
                 background: #68D9A4;
                 border-radius: 5px;
             }
+
             &-list {
                 display: none;
                 grid-template-columns: repeat(3, 200px);
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
                 background: #68D9A4;
+
                 a {
                     width: 200px;
                 }
-                a:hover{
+
+                a:hover {
                     width: 180px;
                     background: lighten(#68D9A4, 10%);
                 }
             }
         }
+
         &_ustensils {
-            h2{
+            h2 {
                 background: #ED6454;
                 border-radius: 5px;
             }
+
             &-list {
                 display: none;
                 grid-template-columns: repeat(3, 200px);
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
                 background: #ED6454;
+
                 a {
                     width: 200px;
                 }
-                a:hover{
+
+                a:hover {
                     width: 180px;
                     background: lighten(#ED6454, 10%);
                 }
@@ -79,12 +92,13 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-        
+
         }
 
         i {
             position: absolute;
             right: 15px;
+            font-size: 30px;
         }
 
         &_ingredients,
@@ -184,10 +198,23 @@
             &-description {
                 right: 0;
                 padding: 10px;
+                text-align: justify;
             }
 
             &-titre {
                 padding: 10px;
+
+                span:first-child {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            &-ingredients li {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
     }

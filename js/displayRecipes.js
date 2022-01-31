@@ -17,13 +17,13 @@ class displayRecipes {
                 </div>
                 <div class="recipes_bloc-titre">
                     <h2>
-                    <span>${element.name}</span>
+                    <span>${element.name.length > 30 ? element.name.substr(0, 30)+'...':element.name}</span>
                     <span><i class="far fa-clock"></i>
                     ${element.time}min</span>
                     </h2>
                 </div>
                 <div class="recipes_bloc-description">
-                ${element.description}
+                ${element.description.substr(0, 200)+'...'}
                 </div>
                 <div class="recipes_bloc-ingredients">
                 <ul>

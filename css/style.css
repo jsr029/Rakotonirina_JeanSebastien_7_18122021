@@ -321,6 +321,7 @@ main {
 .container .dropdown i {
   position: absolute;
   right: 15px;
+  font-size: 30px;
 }
 .container .dropdown_ingredients, .container .dropdown_appliance, .container .dropdown_ustensils {
   min-width: 200px;
@@ -393,9 +394,20 @@ main {
 .container .recipes_bloc-description {
   right: 0;
   padding: 10px;
+  text-align: justify;
 }
 .container .recipes_bloc-titre {
   padding: 10px;
+}
+.container .recipes_bloc-titre span:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container .recipes_bloc-ingredients li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .recipes {

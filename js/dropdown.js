@@ -1,10 +1,10 @@
 class dropdown {
     render() {
-        let iconeIngredients = document.querySelector('.dropdown_ingredients .fa-angle-up');
+        let iconeIngredients = document.querySelector('.dropdown_ingredients .fa-angle-down');
         iconeIngredients.addEventListener('click', openIDrop);
-        let iconeAppliance = document.querySelector('.dropdown_appliance .fa-angle-up');
+        let iconeAppliance = document.querySelector('.dropdown_appliance .fa-angle-down');
         iconeAppliance.addEventListener('click', openADrop);
-        let iconeUstensils = document.querySelector('.dropdown_ustensils .fa-angle-up');
+        let iconeUstensils = document.querySelector('.dropdown_ustensils .fa-angle-down');
         iconeUstensils.addEventListener('click', openUDrop);
     }
 }
@@ -32,12 +32,12 @@ let openIDrop = function (iClicked) {
     let dropUH2 = document.querySelector('.dropdown_ustensils h2');
     let dropUH2span = document.querySelector('.dropdown_ustensils h2 span');
     /**Ustensils end */
-    if (iClickedClassNameSplit == 'fa-angle-up') {
+    if (iClickedClassNameSplit == 'fa-angle-down') {
         dropIngredients.style.display = 'block';
         dropIngredients.style.minWidth = '270px';
         ingredientsList.style.display = 'grid';
-        iClicked.target.classList.remove('fa-angle-up');
-        iClicked.target.classList.add('fa-angle-down');
+        iClicked.target.classList.remove('fa-angle-down');
+        iClicked.target.classList.add('fa-angle-up');
         dropIH2span.style.display = 'none';
         dropIH2.style.display = 'none';
         dropIngredientsBloc.appendChild(iClicked.target);
@@ -45,10 +45,10 @@ let openIDrop = function (iClicked) {
         dropAppliance.style.display = 'none';
         applianceList.style.display = 'none';
         if (aClicked) {
-            aClicked.className = 'fa fa-angle-up';
+            aClicked.className = 'fa fa-angle-down';
             dropAH2.appendChild(aClicked);
         } else if (!aClicked) {
-            dropAH2i.className = 'fa fa-angle-up';
+            dropAH2i.className = 'fa fa-angle-down';
         }
         dropAH2span.style.display = 'block';
         /**Appliance end */
@@ -56,19 +56,27 @@ let openIDrop = function (iClicked) {
         dropUstensils.style.display = 'none';
         ustensilsList.style.display = 'none';
         if (uClicked) {
-            uClicked.className = 'fa fa-angle-up';
+            uClicked.className = 'fa fa-angle-down';
             dropUH2.appendChild(uClicked);
         } else if (!uClicked) {
-            dropUH2i.className = 'fa fa-angle-up';
+            dropUH2i.className = 'fa fa-angle-down';
         }
         dropUH2span.style.display = 'block';
+        dropAH2.style.display = 'flex';
+        dropAH2span.style.display = 'block';
         /**Ustensils end */
-    } else if (iClickedClassNameSplit == 'fa-angle-down') {
+        dropUH2.style.display = 'flex';
+        dropUH2span.style.display = 'block';
+    } else if (iClickedClassNameSplit == 'fa-angle-up') {
         dropIngredients.style.display = 'none';
         dropIngredients.style.minWidth = '200px';
         ingredientsList.style.display = 'none';
-        iClicked.target.classList.remove('fa-angle-down');
-        iClicked.target.classList.add('fa-angle-up');
+        iClicked.target.classList.remove('fa-angle-up');
+        iClicked.target.classList.add('fa-angle-down');
+        dropUH2.style.display = 'flex';
+        dropUH2span.style.display = 'block';
+        dropAH2.style.display = 'flex';
+        dropAH2span.style.display = 'block';
         dropIH2span.style.display = 'block';
         dropIH2.style.display = 'flex';
         dropIH2.appendChild(iClicked.target);
@@ -98,24 +106,25 @@ let openADrop = function (aClicked) {
     let ustensilsList = document.querySelector('.dropdown_ustensils-list');
     let dropUH2i = document.querySelector('.dropdown_ustensils h2 i');
     /**Ustensils end */
-    if (aClickedClassNameSplit == 'fa-angle-up') {
+    if (aClickedClassNameSplit == 'fa-angle-down') {
         dropAppliance.style.display = 'block';
         applianceList.style.display = 'grid';
-        aClicked.target.classList.remove('fa-angle-up');
-        aClicked.target.classList.add('fa-angle-down');
+        aClicked.target.classList.remove('fa-angle-down');
+        aClicked.target.classList.add('fa-angle-up');
         dropAH2span.style.display = 'none';
+        dropAH2.style.display = 'none';
         dropApplianceBloc.appendChild(aClicked.target);
         /**Ingredients */
         dropIngredients.style.display = 'none';
         ingredientsList.style.display = 'none';
-         dropIH2.style.display = 'none';
-       if (iClicked) {
-            iClicked.className = 'fa fa-angle-up';
+        dropIH2.style.display = 'none';
+        if (iClicked) {
+            iClicked.className = 'fa fa-angle-down';
             dropIH2.style.display = 'flex';
             dropIH2.appendChild(iClicked);
         } else if (!iClicked) {
             dropIH2.style.display = 'flex';
-            dropIH2i.className = 'fa fa-angle-up';
+            dropIH2i.className = 'fa fa-angle-down';
         }
         dropIH2span.style.display = 'block';
         /**Ingredients end */
@@ -123,18 +132,23 @@ let openADrop = function (aClicked) {
         dropUstensils.style.display = 'none';
         ustensilsList.style.display = 'none';
         if (uClicked) {
-            uClicked.className = 'fa fa-angle-up';
+            uClicked.className = 'fa fa-angle-down';
             dropUH2.appendChild(uClicked);
         } else if (!uClicked) {
-            dropUH2i.className = 'fa fa-angle-up';
+            dropUH2i.className = 'fa fa-angle-down';
         }
         dropUH2span.style.display = 'block';
+        dropUH2.style.display = 'flex';
+        dropUH2span.style.display = 'block';
         /**Ustensils end */
-    } else if (aClickedClassNameSplit == 'fa-angle-down') {
+    } else if (aClickedClassNameSplit == 'fa-angle-up') {
         dropAppliance.style.display = 'none';
         applianceList.style.display = 'none';
-        aClicked.target.classList.remove('fa-angle-down');
-        aClicked.target.classList.add('fa-angle-up');
+        aClicked.target.classList.remove('fa-angle-up');
+        aClicked.target.classList.add('fa-angle-down');
+        dropUH2.style.display = 'flex';
+        dropUH2span.style.display = 'block';
+       dropAH2.style.display = 'flex';
         dropAH2span.style.display = 'block';
         dropAH2.appendChild(aClicked.target);
     }
@@ -163,23 +177,23 @@ let openUDrop = function (uClicked) {
     let applianceList = document.querySelector('.dropdown_appliance-list');
     let dropAH2i = document.querySelector('.dropdown_appliance h2 i');
     /**Appliance End */
-    if (uClickedClassNameSplit == 'fa-angle-up') {
+    if (uClickedClassNameSplit == 'fa-angle-down') {
         dropUstensils.style.display = 'block';
         ustensilsList.style.display = 'grid';
-        uClicked.target.classList.remove('fa-angle-up');
-        uClicked.target.classList.add('fa-angle-down');
+        uClicked.target.classList.remove('fa-angle-down');
+        uClicked.target.classList.add('fa-angle-up');
         dropUH2span.style.display = 'none';
         dropUstensilsBloc.appendChild(uClicked.target);
         /**Ingredients */
         dropIngredients.style.display = 'none';
         ingredientsList.style.display = 'none';
         if (iClicked) {
-            iClicked.className = 'fa fa-angle-up';
+            iClicked.className = 'fa fa-angle-down';
             dropIH2.style.display = 'flex';
             dropIH2.appendChild(iClicked);
         } else if (!iClicked) {
             dropIH2.style.display = 'flex';
-            dropIH2i.className = 'fa fa-angle-up';
+            dropIH2i.className = 'fa fa-angle-down';
         }
         dropIH2span.style.display = 'block';
         /**Ingredients end */
@@ -187,17 +201,25 @@ let openUDrop = function (uClicked) {
         dropAppliance.style.display = 'none';
         applianceList.style.display = 'none';
         if (aClicked) {
-            aClicked.className = 'fa fa-angle-up';
+            aClicked.className = 'fa fa-angle-down';
             dropAH2.appendChild(aClicked);
         } else if (!aClicked) {
-            dropAH2i.className = 'fa fa-angle-up';
+            dropAH2i.className = 'fa fa-angle-down';
         }
         dropAH2span.style.display = 'block';
+        dropAH2.style.display = 'flex';
+        dropAH2span.style.display = 'block';
+        dropUH2.style.display = 'none';
+        dropUH2span.style.display = 'none';
         /**Appliance end */
-    } else if (uClickedClassNameSplit == 'fa-angle-down') {
+    } else if (uClickedClassNameSplit == 'fa-angle-up') {
         dropUstensils.style.display = 'none';
-        uClicked.target.classList.remove('fa-angle-down');
-        uClicked.target.classList.add('fa-angle-up');
+        uClicked.target.classList.remove('fa-angle-up');
+        uClicked.target.classList.add('fa-angle-down');
+        dropUH2.style.display = 'flex';
+        dropUH2span.style.display = 'block';
+        dropAH2.style.display = 'flex';
+        dropAH2span.style.display = 'block';
         dropUH2span.style.display = 'block';
         dropUH2.appendChild(uClicked.target);
         ustensilsList.style.display = 'none';

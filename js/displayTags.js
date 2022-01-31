@@ -46,7 +46,7 @@ class displayTags {
                     dropIH2.style.display = 'flex';
                 } else if (!iClicked) {
                     dropIH2.style.display = 'flex';
-                    dropIH2i.className = 'fa fa-angle-up';
+                    dropIH2i.className = 'fa fa-angle-down';
                 }
                 dropIH2span.style.display = 'block';
                 /**Ingredients end */
@@ -63,11 +63,14 @@ class displayTags {
                 /**Appliance */
                 dropAppliance.style.display = 'none';
                 applianceList.style.display = 'none';
+                dropAH2.style.display = 'none';
                 if (aClicked) {
                     aClicked.className = 'fa fa-angle-up';
                     dropAH2.appendChild(aClicked);
+                    dropAH2.style.display = 'flex';
                 } else if (!aClicked) {
-                    dropAH2i.className = 'fa fa-angle-up';
+                    dropAH2.style.display = 'flex';
+                    dropAH2i.className = 'fa fa-angle-down';
                 }
                 dropAH2span.style.display = 'block';
                 /**Appliance end */
@@ -84,19 +87,22 @@ class displayTags {
                 /**Ustensils */
                 dropUstensils.style.display = 'none';
                 ustensilsList.style.display = 'none';
+                dropUH2.style.display = 'none';
                 if (uClicked) {
-                    uClicked.className = 'fa fa-angle-up';
+                    uClicked.className = 'fa fa-angle-down';
                     dropUH2.appendChild(uClicked);
+                    dropUH2.style.display = 'flex';
                 } else if (!uClicked) {
-                    dropUH2i.className = 'fa fa-angle-up';
+                    dropUH2.style.display = 'flex';
+                    dropUH2i.className = 'fa fa-angle-down';
                 }
                 dropUH2span.style.display = 'block';
                 /**Ustensils end */
             });
         });
-        this.closeTag(data);
+        this.closeTag();
     }
-    closeTag(data) {
+    closeTag() {
         let tagIcon = document.querySelector('.tagIcon');
         let underIngredients = document.querySelector('.underSearch_ingredientsTags');
         let tagAcon = document.querySelector('.tagAcon');
@@ -144,8 +150,7 @@ class displayTags {
             }
             dropIH2span.style.display = 'block';
             /**Ingredients end */
-            new  displayRecipes().render(recipes);
-            new displayMenu().render(recipes);
+            location.reload();
         });
         tagAcon.addEventListener('click', function (event) {
             underAppliance.style.display = 'none';
@@ -161,8 +166,7 @@ class displayTags {
             }
             dropAH2span.style.display = 'block';
             /**Appliance end */
-            new  displayRecipes().render(recipes);
-            new displayMenu().render(recipes);
+            location.reload();
         });
         tagUcon.addEventListener('click', function (event) {
             underUstensils.style.display = 'none';
@@ -178,8 +182,7 @@ class displayTags {
             }
             dropUH2span.style.display = 'block';
             /**Ustensils end */
-            new  displayRecipes().render(recipes);
-            new displayMenu().render(recipes);
+            location.reload();
         });
     }
 }

@@ -6,6 +6,10 @@ class displayMenu {
         let boxIMenu = [];
         let uniqboxIMenu = [];
         let ingredientsTab = [];
+
+        let baseI = [];
+        let baseU = [];
+        let baseA = [];
         /**Appliance */
         let dropAList = document.querySelector('.dropdown_appliance-list');
         let globalSearchA = document.querySelector('.globalSearch');
@@ -21,11 +25,14 @@ class displayMenu {
         /**Ustensils end */
         for (let i = 0; i < data.length; i++) {
             applianceTab.push(data[i].appliance.trim());
+            baseA.push(data[i]);
             for (let j = 0; j < data[i].ingredients.length; j++) {
                 ingredientsTab.push(data[i].ingredients[j].ingredient.trim());
+                baseI.push(data[i]);
             }
             for (let j = 0; j < data[i].ustensils.length; j++) {
                 ustensilsTab.push(data[i].ustensils[j].trim());
+                baseU.push(data[i]);
             }
         }
         uniqboxIMenu = [...new Set(ingredientsTab)];
@@ -49,7 +56,8 @@ class displayMenu {
             boxUMenu.push(`<a href="javascript:void(0)">${elm}</a>`);
         });
         dropUList.innerHTML = boxUMenu.join('');
-        new displayTags().render(data);
+        let baseTab = [...new Set([...baseU, ...baseI, ...baseA])];
+        new displayTags().render(baseTab);
     }
 
 }
