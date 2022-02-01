@@ -15,8 +15,7 @@ la recette, la liste des ingrédients de la recette, la description de la recett
 ## 6. Au fur et à mesure du remplissage les mots clés ne correspondant pas à la frappe dans le champ disparaissent. Par exemple, si l’utilisateur entre “coco” dans la liste d’ingrédients, seuls vont rester “noix de coco” et “lait de coco”.
 ## 7. L’utilisateur choisit un mot clé dans le champ
 ## 8. Le mot clé apparaît sous forme de tag sous la recherche principale
-## 9. Les résultats de recherche sont actualisés, ainsi que les éléments disponibles dans les
-champs de recherche avancée
+## 9. Les résultats de recherche sont actualisés, ainsi que les éléments disponibles dans les champs de recherche avancée
 ## 10. L’utilisateur sélectionne une recette
 
 ## Scénario alternatif A1
