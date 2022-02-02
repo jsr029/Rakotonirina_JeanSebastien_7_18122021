@@ -2,15 +2,19 @@ import removeArticles from './removeArticles.js';
 class displayRecipes {
     render(data) {
         removeArticles();
-        data.sort(function(a, b){
-            if(b.name < a.name) { return -1; }
-            if(b.name > a.name) { return 1; }
+        data.sort(function (a, b) {
+            if (b.name < a.name) {
+                return -1;
+            }
+            if (b.name > a.name) {
+                return 1;
+            }
             return 0;
         });
-                const recipesHtml = document.querySelector('.recipes');
+        const recipesHtml = document.querySelector('.recipes');
         //const ingredientsHtml = document.querySelector('.recipes_bloc-titre');
         let boxRecipes;
-        for(let element of data){
+        for (let element of data) {
             boxRecipes = `
             <article class="recipes_bloc">
                 <div class="recipes_bloc-img">
@@ -30,7 +34,7 @@ class displayRecipes {
             `;
             recipesHtml.insertAdjacentHTML("afterbegin", boxRecipes);
             const ingredientsHtml = document.querySelector('.recipes_bloc-ingredients ul');
-            for(let elm of element.ingredients){
+            for (let elm of element.ingredients) {
                 let boxIngredients = `
                 <li>    
                     ${elm.ingredient+" : "}  
@@ -38,15 +42,20 @@ class displayRecipes {
                     ${elm.unit?elm.unit:''}
                 </li>
                 `;
-               ingredientsHtml.insertAdjacentHTML("beforeend", boxIngredients);
+                ingredientsHtml.insertAdjacentHTML("beforeend", boxIngredients);
             }
-                let boxEnd = `
+            let boxEnd = `
                 </ul>
                 </div>            
                 </article>
                 `;
-                recipesHtml.insertAdjacentHTML("beforeend", boxEnd);
-            }
+            recipesHtml.insertAdjacentHTML("beforeend", boxEnd);
+        }
+        let recipesHtmlList = document.querySelector('.recipes');
+        if (data.length == 0) {
+            let noRecipesFound = "« Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc...";
+            recipesHtmlList.innerHTML = noRecipesFound;
+        }
     }
 }
 export default displayRecipes;
