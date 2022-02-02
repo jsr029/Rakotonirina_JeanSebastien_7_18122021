@@ -51,11 +51,6 @@ class displayRecipes {
                 `;
             recipesHtml.insertAdjacentHTML("beforeend", boxEnd);
         }
-        let recipesHtmlList = document.querySelector('.recipes');
-        if (data.length == 0) {
-            let noRecipesFound = "« Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc...";
-            recipesHtmlList.innerHTML = noRecipesFound;
-        }
     }
 }
 export default displayRecipes;

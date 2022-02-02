@@ -13,7 +13,7 @@ class globalSearch {
         let baseModified = [];
         search.addEventListener('input', function (evt) {
             let globalInput = search.value;
-            if (globalInput.length > 3) {
+            if (globalInput.length > 3) 
                 nameResult = [];
                 descriptionResult = [];
                 applianceResult = [];
@@ -59,7 +59,7 @@ class globalSearch {
                 newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
                 new displayRecipes().render(newBaseFilteredConcated);
                 new displayMenu().render(newBaseFilteredConcated);
-            }
+            
         });
         //Affiche les recettes par ordre alphabetique
         recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
