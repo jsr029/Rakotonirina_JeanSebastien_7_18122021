@@ -175,7 +175,14 @@
             }
         }
     }
-
+    .nbrRecipes{
+        margin-top: 52px;
+        display: flex;
+        flex-direction: row;
+        font-family: "Lato";
+        font-size: 22px;
+        font-weight: 700;
+    }
     .recipes {
         margin-bottom: 50px;
 

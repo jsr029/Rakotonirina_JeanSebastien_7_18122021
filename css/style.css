@@ -83,7 +83,7 @@ main {
 }
 
 .entete_titre h1 {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
@@ -374,6 +374,14 @@ main {
   top: 5px;
   right: 5px;
 }
+.container .nbrRecipes {
+  margin-top: 52px;
+  display: flex;
+  flex-direction: row;
+  font-family: "Lato";
+  font-size: 22px;
+  font-weight: 700;
+}
 .container .recipes {
   margin-bottom: 50px;
 }
@@ -419,7 +427,6 @@ main {
   row-gap: 20px;
   justify-content: space-around;
   align-items: center;
-  margin-top: 52px;
 }
 .recipes .recipes_bloc {
   max-width: 380px;

@@ -54,14 +54,12 @@ class globalSearch {
                 if (elm.name.toLowerCase().includes(globalInput.toLowerCase())) {
                     nameResult.push(elm);
                 }
-                let recipes = document.querySelector('.recipes');
-                if (newBaseFilteredConcated.length > 0 && globalInput.length > 0)
-                    recipes.innerHTML = '« Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc...';
-                });
-            newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...descriptionResult, ...applianceResult, ...ustensilsResult])];
-            newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
-            new displayRecipes().render(newBaseFilteredConcated);
-            new displayMenu().render(newBaseFilteredConcated);
+                newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...descriptionResult, ...applianceResult, ...ustensilsResult])];
+                newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
+                    new displayRecipes().nbrRecipes(newBaseFilteredConcated);
+                    new displayRecipes().render(newBaseFilteredConcated);
+                    new displayMenu().render(newBaseFilteredConcated);
+            });
         });
         recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
         new displayRecipes().render(recepiesSort);
