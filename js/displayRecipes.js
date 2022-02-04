@@ -62,5 +62,9 @@ class displayRecipes {
             recipesHtml.innerHTML ='';
         }
     }
+    removeMessage(){
+        const recipesHtml = document.querySelector('.nbrRecipes');
+        recipesHtml.innerHTML = '';
+    }
 }
 export default displayRecipes;
