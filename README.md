@@ -61,7 +61,7 @@ see Demo [here](https://jsr029.github.io/Rakotonirina_JeanSebastien_7_18122021)
 ## Structure
 see Structure [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/structure.svg)
 <p align="center">
-  <img src="https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/structure.svg" width="600" alt="files schema">
+  <img src="./tree/Algo-2/structure.svg" width="600" alt="files schema">
 </p>
 
 ## jsBench
