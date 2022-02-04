@@ -1,7 +1,7 @@
 import displayRecipes from "./displayRecipes.js";
 import displayMenu from './displayMenu.js';
-class globalSearch{
-    render(recipes){
+class globalSearch {
+    render(data) {
         let search = document.querySelector(".globalSearch");
         let nameResult = [];
         let ingredientsResult = [];
@@ -9,10 +9,11 @@ class globalSearch{
         let applianceResult = [];
         let ustensilsResult = [];
         let newBaseFilteredConcated = [];
-        var recepiesSort = [];
+        let recepiesSort = [];
+        let baseModified = [];
         search.addEventListener('input', function (evt) {
             let globalInput = search.value;
-                if(globalInput.length > 2){
+            if (globalInput.length > 2) {
                 nameResult = [];
                 descriptionResult = [];
                 applianceResult = [];
@@ -39,13 +40,12 @@ class globalSearch{
                         }
                     }
                 }
-            newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...applianceResult, ...ustensilsResult])];
-            newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
+                    newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...descriptionResult, ...applianceResult, ...ustensilsResult])];
+                    newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
                     new displayRecipes().removeMessage();
                     new displayRecipes().nbrRecipes(newBaseFilteredConcated);
                     new displayRecipes().render(newBaseFilteredConcated);
                     new displayMenu().render(newBaseFilteredConcated, globalInput);
-        });
             } else {
                 new displayRecipes().removeMessage();
                 recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
