@@ -72,5 +72,7 @@ see Test [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/
 <p align="center">
 <img src="./P7jsBecnhEntirePage.JPG" width="800" alt="Structure">
 </p>
+
+## Conclusion 
 - Code Block1 : boucles for... et conditions if... else if...
 - Code Block2 : fonctions natives foreach...map...filter...
