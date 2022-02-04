@@ -12,7 +12,7 @@ class globalSearch{
         var recepiesSort = [];
         search.addEventListener('input', function (evt) {
             let globalInput = search.value;
-                if(globalInput.length > 3)
+                if(globalInput.length > 2){
                 nameResult = [];
                 descriptionResult = [];
                 applianceResult = [];
@@ -41,11 +41,19 @@ class globalSearch{
                 }
             newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...applianceResult, ...ustensilsResult])];
             newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
-            new displayRecipes().render(newBaseFilteredConcated);
-            new displayMenu().render(newBaseFilteredConcated);
+                    new displayRecipes().removeMessage();
+                    new displayRecipes().nbrRecipes(newBaseFilteredConcated);
+                    new displayRecipes().render(newBaseFilteredConcated);
+                    new displayMenu().render(newBaseFilteredConcated, globalInput);
         });
-        //Affiche les recettes par ordre alphabetique
-        recepiesSort = recipes.sort((a, b) => b.name.localeCompare(a.name));
+            } else {
+                new displayRecipes().removeMessage();
+                recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
+                new displayRecipes().render(recepiesSort);
+                new displayMenu().render(recepiesSort);
+            }
+        });
+        recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
         new displayRecipes().render(recepiesSort);
         new displayMenu().render(recepiesSort);
     }
