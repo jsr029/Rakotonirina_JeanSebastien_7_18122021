@@ -69,5 +69,8 @@ see Structure [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_1812
 
 ## jsBench
 see Test [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/P7jsBecnhEntirePage.JPG)
+<p align="center">
+<img src="./P7jsBecnhEntirePage.JPG" width="800" alt="Structure">
+</p>
 + Code Block1 : boucles for... et conditions if... else if...
 + Code Block2 : fonctions natives foreach...map...filter...
