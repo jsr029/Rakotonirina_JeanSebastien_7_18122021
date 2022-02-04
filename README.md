@@ -55,7 +55,7 @@ Conclusion, j'ai toujours ce plaisir particulier, à découvrir chaque nouveau p
 ## Algorigram
 see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/P7algorigram.svg)
 <p align="center">
-<img src="./P7algorigram.svg" width="600" alt="Structure">
+<img src="./P7algorigram.svg" width="800" alt="Structure">
 </p>
 
 ## Site
@@ -64,7 +64,7 @@ see Demo [here](https://jsr029.github.io/Rakotonirina_JeanSebastien_7_18122021)
 ## Structure
 see Structure [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/structure.svg)
 <p align="center">
-<img src="./structure.svg" width="600" alt="Structure">
+<img src="./structure.svg" width="800" alt="Structure">
 </p>
 
 ## jsBench
