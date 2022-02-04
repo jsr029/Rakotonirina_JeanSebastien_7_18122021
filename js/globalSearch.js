@@ -13,7 +13,7 @@ class globalSearch {
         let baseModified = [];
         search.addEventListener('input', function (evt) {
             let globalInput = search.value;
-            if (globalInput.length > 3) {
+            if (globalInput.length > 2) {
                 nameResult = [];
                 descriptionResult = [];
                 applianceResult = [];
