@@ -19,24 +19,24 @@ class globalSearch {
                 applianceResult = [];
                 ingredientsResult = [];
                 ustensilsResult = [];
-                for (let i = 0; i < recipes.length; i++) {
-                    if (recipes[i].name.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
-                        nameResult.push(recipes[i]);
+                for (let i = 0; i < data.length; i++) {
+                    if (data[i].name.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
+                        nameResult.push(data[i]);
                     }
-                    if (recipes[i].description.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
-                        descriptionResult.push(recipes[i]);
+                    if (data[i].description.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
+                        descriptionResult.push(data[i]);
                     }
-                    if (recipes[i].appliance.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
-                        applianceResult.push(recipes[i]);
+                    if (data[i].appliance.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
+                        applianceResult.push(data[i]);
                     }
-                    for (let k = 0; k < recipes[i].ingredients.length; k++) {
-                        if (recipes[i].ingredients[k].ingredient.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
-                            ingredientsResult.push(recipes[i]);
+                    for (let k = 0; k < data[i].ingredients.length; k++) {
+                        if (data[i].ingredients[k].ingredient.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
+                            ingredientsResult.push(data[i]);
                         }
                     }
-                    for (let k = 0; k < recipes[i].ustensils.length; k++) {
-                        if (recipes[i].ustensils[k].toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
-                            ustensilsResult.push(recipes[i]);
+                    for (let k = 0; k < data[i].ustensils.length; k++) {
+                        if (data[i].ustensils[k].toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
+                            ustensilsResult.push(data[i]);
                         }
                     }
                 }
