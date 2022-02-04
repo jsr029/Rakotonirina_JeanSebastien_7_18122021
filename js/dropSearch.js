@@ -1,4 +1,4 @@
-function dropSearch() {
+function dropSearch(data) {
   let inputIngredients = document.querySelector('.dropdown_ingredients-input');
   inputIngredients.addEventListener('input', function (evt) {
     ingredientsSearch();

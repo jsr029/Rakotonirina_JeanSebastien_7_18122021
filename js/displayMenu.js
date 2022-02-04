@@ -1,7 +1,7 @@
 import displayTags from "./displayTags.js";
 
 class displayMenu {
-    render(data) {
+    render(data, input) {
         let dropIList = document.querySelector('.dropdown_ingredients-list');
         let boxIMenu = [];
         let uniqboxIMenu = [];

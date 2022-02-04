@@ -1,6 +1,5 @@
 import displayRecipes from "./displayRecipes.js";
 import displayMenu from "./displayMenu.js";
-import recipes from './recipes.js';
 
 class displayTags {
     render(data) {

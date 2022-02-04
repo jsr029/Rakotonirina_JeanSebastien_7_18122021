@@ -58,7 +58,7 @@ class globalSearch {
                 newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
                     new displayRecipes().nbrRecipes(newBaseFilteredConcated);
                     new displayRecipes().render(newBaseFilteredConcated);
-                    new displayMenu().render(newBaseFilteredConcated);
+                    new displayMenu().render(newBaseFilteredConcated, globalInput);
             });
         });
         recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
