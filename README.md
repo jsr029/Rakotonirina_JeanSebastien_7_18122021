@@ -58,6 +58,9 @@ see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_
 ## Site
 see Demo [here](https://jsr029.github.io/Rakotonirina_JeanSebastien_7_18122021)
 
+## Structure
+see Structure ![here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/structure.svg
+
 ## jsBench
 see Test [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/P7jsBecnhEntirePage.JPG)
 Code Block1 : boucles for... et conditions if... else if...
