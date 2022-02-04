@@ -36,9 +36,9 @@ L'enchaînement A2 commence au point 1 du scénario nominal et reprend au point 
 ## 13. Le mot clé apparaît sous forme de tag sous la recherche principale
 ## 14. Les résultats de recherche sont actualisés, ainsi que les éléments disponibles dans les champs de recherche avancée
 
-L'application consiste en une page simple, réalisée avec Javascript (## sans Framework) utilisant des fonctions natives (foreach, map, filter,...) dans la branch Algo2 et des boucles (for), des conditions (if, else if) dans la branch Master, au niveau de l'input principal, comme demandé et vu avec mon Mentor. 
+L'application consiste en une page simple, réalisée avec Javascript (sans Framework) utilisant des fonctions natives (foreach, map, filter,...) dans la branch Algo2 et des boucles (for), des conditions (if, else if) dans la branch Master, au niveau de l'input principal, comme demandé et vu avec mon Mentor. 
 
-L'utilisateur pourra donc chercher une recette parmi 50, soit via les mots clés qui mactheront avec le nom, la liste des ingrédients ou la description, soit via un input placé dans 3 dropdowns (ingrédients, appareil, ustensils) ou en cliquant sur un lien correspondat à un tag. La base est dans le fichier ./js/recipes.js, les recettes sont stockées dans un tableau appelé data.  
+L'utilisateur pourra donc chercher une recette parmi 50, soit via les mots clés qui mactheront avec le nom, la liste des ingrédients ou la description, soit via un input placé dans 3 dropdowns (ingrédients, appareil, ustensils) ou en cliquant sur un lien correspondant à la création d"un tag qui apparaitra sous l'input principal portant le nom du lien de la liste d'une des 3 catégories. La base est dans le fichier ./js/recipes.js, les recettes sont stockées dans un tableau appelé data.  
 
 ./js/globalSearch.js renferme l'algorithme dans chacune des branch sous la class du même nom. L'utilisation des fonctions natives améliorent considérablement les performances, logique, sinon leurs existences seraient remises en question. Mais le moyen le plus efficace pour appuyer cette thèse est le test des 2 algos dans jsBench et le résultat est sans appel. 
 
