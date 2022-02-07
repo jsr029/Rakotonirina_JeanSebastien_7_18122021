@@ -62,7 +62,7 @@ see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_
 see Demo [here](https://jsr029.github.io/Rakotonirina_JeanSebastien_7_18122021)
 
 ## Structure
-see Structure [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/structure.svg)
+see Structure [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/structure2.svg)
 <p align="center">
 <img src="./structure.svg" width="800" alt="Structure">
 </p>
