@@ -18,6 +18,7 @@ let openIDrop = function (iClicked) {
     let dropIH2 = document.querySelector('.dropdown_ingredients h2');
     let ingredientsList = document.querySelector('.dropdown_ingredients-list');
     let ustensilsList = document.querySelector('.dropdown_ustensils-list');
+    let globalInput = document.querySelector('.globalSearch');
     /**Appliance */
     let dropAH2 = document.querySelector('.dropdown_appliance h2');
     let dropAH2span = document.querySelector('.dropdown_appliance h2 span');
@@ -68,6 +69,9 @@ let openIDrop = function (iClicked) {
         /**Ustensils end */
         dropUH2.style.display = 'flex';
         dropUH2span.style.display = 'block';
+        globalInput.addEventListener('focus', function(event){
+            globalInput.blur();
+        });
     } else if (iClickedClassNameSplit == 'fa-angle-up') {
         dropIngredients.style.display = 'none';
         dropIngredients.style.minWidth = '200px';
@@ -91,6 +95,7 @@ let openADrop = function (aClicked) {
     let dropAH2span = document.querySelector('.dropdown_appliance h2 span');
     let dropAH2 = document.querySelector('.dropdown_appliance h2');
     let applianceList = document.querySelector('.dropdown_appliance-list');
+    let globalInput = document.querySelector('.globalSearch');
     /**Ingredients */
     let dropIH2 = document.querySelector('.dropdown_ingredients h2');
     let dropIH2span = document.querySelector('.dropdown_ingredients h2 span');
@@ -142,6 +147,9 @@ let openADrop = function (aClicked) {
         dropUH2.style.display = 'flex';
         dropUH2span.style.display = 'block';
         /**Ustensils end */
+        globalInput.addEventListener('focus', function(event){
+            globalInput.blur();
+        });
     } else if (aClickedClassNameSplit == 'fa-angle-up') {
         dropAppliance.style.display = 'none';
         applianceList.style.display = 'none';
@@ -162,6 +170,7 @@ let openUDrop = function (uClicked) {
     let dropUH2span = document.querySelector('.dropdown_ustensils h2 span');
     let dropUH2 = document.querySelector('.dropdown_ustensils h2');
     let ustensilsList = document.querySelector('.dropdown_ustensils-list');
+    let globalInput = document.querySelector('.globalSearch');
     /**Ingredients */
     let dropIH2 = document.querySelector('.dropdown_ingredients h2');
     let dropIH2span = document.querySelector('.dropdown_ingredients h2 span');
@@ -213,6 +222,9 @@ let openUDrop = function (uClicked) {
         dropUH2.style.display = 'none';
         dropUH2span.style.display = 'none';
         /**Appliance end */
+        globalInput.addEventListener('focus', function(event){
+            globalInput.blur();
+        });
     } else if (uClickedClassNameSplit == 'fa-angle-up') {
         dropUstensils.style.display = 'none';
         uClicked.target.classList.remove('fa-angle-up');
