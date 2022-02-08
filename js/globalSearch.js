@@ -1,7 +1,7 @@
 import displayRecipes from "./displayRecipes.js";
 import displayMenu from './displayMenu.js';
 class globalSearch {
-    render(data) {
+    render(recipes) {
         let search = document.querySelector(".globalSearch");
         let nameResult = [];
         let ingredientsResult = [];
