@@ -52,10 +52,17 @@ for(let a=0; a < améliorations.length; a++){if(certaines améliorations étaien
 
 Conclusion, j'ai toujours ce plaisir particulier, à découvrir chaque nouveau projet, fasciné par les différents fabuleux design, simples toujours dans le thème, motivant et repoussant ainsi mes limites pour aller vers le meilleur de moi-même. P7 montre l'importance des fonctions natives javascrit ou autre, pourtant mea culpa, j'ai tendance à faire l'inverse. La preuve étant, j'ai développé l'algo sans fonctions natives en premier d'où le nom de la branch, resté inchangé, Master.
 
+## Fiche d'investigation
+see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-1/Fiche.pdf)
+<p align="center">
+<img src="./Fiche.pdf" width="800" alt="Fiche">
+</p>
+
+
 ## Algorigram
 see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/P7algorigram.svg)
 <p align="center">
-<img src="./P7algorigram.svg" width="800" alt="Structure">
+<img src="./P7algorigram.svg" width="800" alt="Algo">
 </p>
 
 ## Site
@@ -70,7 +77,7 @@ see Structure [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_1812
 ## jsBench
 see Test [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/P7jsBecnhEntirePage.JPG)
 <p align="center">
-<img src="./P7jsBecnhEntirePage.JPG" width="800" alt="Structure">
+<img src="./P7jsBecnhEntirePage.JPG" width="800" alt="jsBench">
 </p>
 
 ## Conclusion 
