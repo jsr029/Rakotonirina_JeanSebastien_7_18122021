@@ -39,7 +39,7 @@ class globalSearch {
                 });
                 baseModified.forEach(elm => {
                     elm.ingredients.filter(function (ing) {
-                        if (ing.ingredient.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
+                        if (ing.ingredient.toLowerCase().includes(globalInput.toLowerCase())) {
                             ingredientsResult.push(elm);
                         }
                     });
