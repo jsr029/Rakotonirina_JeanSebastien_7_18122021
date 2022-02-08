@@ -24,15 +24,30 @@ class displayMenu {
         let ustensilsTab = [];
         /**Ustensils end */
         for (let i = 0; i < data.length; i++) {
-            applianceTab.push(data[i].appliance.trim());
-            baseA.push(data[i]);
-            for (let j = 0; j < data[i].ingredients.length; j++) {
-                ingredientsTab.push(data[i].ingredients[j].ingredient.trim());
-                baseI.push(data[i]);
+            if (data[i].appliance.toLowerCase().includes(input)) {
+                applianceTab.push(data[i].appliance.trim());
+                baseA.push(data[i]);
+            }else{
+                applianceTab.push(data[i].appliance.trim());
+                baseA.push(data[i]);
             }
-            for (let j = 0; j < data[i].ustensils.length; j++) {
-                ustensilsTab.push(data[i].ustensils[j].trim());
-                baseU.push(data[i]);
+            for (let j = 0; j < data[i].ingredients.length; j++) {
+                if (data[i].ingredients[j].ingredient.toLowerCase().includes(input)) {
+                    ingredientsTab.push(data[i].ingredients[j].ingredient.trim());
+                    baseI.push(data[i]);
+                }else{
+                    ingredientsTab.push(data[i].ingredients[j].ingredient.trim());
+                    baseI.push(data[i]);
+                }
+            }
+            for (let k = 0; k < data[i].ustensils.length; k++) {
+                if (data[i].ustensils[k].toLowerCase().includes(input)) {
+                    ustensilsTab.push(data[i].ustensils[k].trim());
+                    baseU.push(data[i]);
+                }else{
+                    ustensilsTab.push(data[i].ustensils[k].trim());
+                    baseU.push(data[i]);
+                }
             }
         }
         uniqboxIMenu = [...new Set(ingredientsTab)];
@@ -47,8 +62,8 @@ class displayMenu {
         uniqboxAMenu.forEach(elm => {
             boxAMenu.push(`<a href="javascript:void(0)">${elm}</a>`);
         });
-         dropAList.innerHTML = boxAMenu.join('');
-       /**Appliance end */
+        dropAList.innerHTML = boxAMenu.join('');
+        /**Appliance end */
         dropUList.innerHTML = boxUMenu.join('');
         uniqboxUMenu = [...new Set(ustensilsTab)];
         uniqboxUMenu.sort();
