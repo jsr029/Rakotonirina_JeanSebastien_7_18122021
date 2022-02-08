@@ -48,12 +48,12 @@ class globalSearch {
                     new displayMenu().render(newBaseFilteredConcated, globalInput);
             } else {
                 new displayRecipes().removeMessage();
-                recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
+                recepiesSort = recipes.sort((a, b) => b.name.localeCompare(a.name));
                 new displayRecipes().render(recepiesSort);
                 new displayMenu().render(recepiesSort);
             }
         });
-        recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
+        recepiesSort = recipes.sort((a, b) => b.name.localeCompare(a.name));
         new displayRecipes().render(recepiesSort);
         new displayMenu().render(recepiesSort);
     }
