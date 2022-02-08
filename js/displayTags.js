@@ -3,7 +3,7 @@ import displayMenu from "./displayMenu.js";
 
 class displayTags {
     render(data) {
-        let globalInput = documment.querySelector('.globalSearch');
+        let globalInput = document.querySelector('.globalSearch');
         let dropIngredientsLista = document.querySelectorAll('.dropdown_ingredients-list a');
         let tagIngredients = document.querySelector('.tagIngredients');
         let underIngredients = document.querySelector('.underSearch_ingredientsTags');
