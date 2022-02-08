@@ -20,22 +20,22 @@ class globalSearch {
                 ingredientsResult = [];
                 ustensilsResult = [];
                 for (let i = 0; i < data.length; i++) {
-                    if (data[i].name.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
+                    if (data[i].name.toLowerCase().includes(globalInput.toLowerCase())) {
                         nameResult.push(data[i]);
                     }
-                    if (data[i].description.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
+                    if (data[i].description.toLowerCase().includes(globalInput.toLowerCase())) {
                         descriptionResult.push(data[i]);
                     }
-                    if (data[i].appliance.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
+                    if (data[i].appliance.toLowerCase().includes(globalInput.toLowerCase())) {
                         applianceResult.push(data[i]);
                     }
                     for (let k = 0; k < data[i].ingredients.length; k++) {
-                        if (data[i].ingredients[k].ingredient.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
+                        if (data[i].ingredients[k].ingredient.toLowerCase().includes(globalInput.toLowerCase())) {
                             ingredientsResult.push(data[i]);
                         }
                     }
                     for (let k = 0; k < data[i].ustensils.length; k++) {
-                        if (data[i].ustensils[k].toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
+                        if (data[i].ustensils[k].toLowerCase().includes(globalInput.toLowerCase())) {
                             ustensilsResult.push(data[i]);
                         }
                     }
