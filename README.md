@@ -80,6 +80,6 @@ see Test [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/
 <img src="./P7jsBecnhEntirePage.JPG" width="800" alt="jsBench">
 </p>
 
-## Conclusion 
+## Légendes 
 - Code Block1 : boucles for... et conditions if... else if...
 - Code Block2 : fonctions natives foreach...map...filter...
