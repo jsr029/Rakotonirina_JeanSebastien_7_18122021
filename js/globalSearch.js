@@ -20,19 +20,6 @@ class globalSearch {
                 ingredientsResult = [];
                 ustensilsResult = [];
                 for (let i = 0; i < data.length; i++) {
-<<<<<<< HEAD
-                    if (data[i].name.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
-                        nameResult.push(data[i]);
-                    }
-                    if (data[i].description.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
-                        descriptionResult.push(data[i]);
-                    }
-                    if (data[i].appliance.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
-                        applianceResult.push(data[i]);
-                    }
-                    for (let k = 0; k < data[i].ingredients.length; k++) {
-                        if (data[i].ingredients[k].ingredient.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
-=======
                     if (data[i].name.toLowerCase().includes(globalInput.toLowerCase())) {
                         nameResult.push(data[i]);
                     }
@@ -44,16 +31,11 @@ class globalSearch {
                     }
                     for (let k = 0; k < data[i].ingredients.length; k++) {
                         if (data[i].ingredients[k].ingredient.toLowerCase().includes(globalInput.toLowerCase())) {
->>>>>>> fdfd78540a250d48029156b6c24f316d30eff280
                             ingredientsResult.push(data[i]);
                         }
                     }
                     for (let k = 0; k < data[i].ustensils.length; k++) {
-<<<<<<< HEAD
-                        if (data[i].ustensils[k].toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
-=======
                         if (data[i].ustensils[k].toLowerCase().includes(globalInput.toLowerCase())) {
->>>>>>> fdfd78540a250d48029156b6c24f316d30eff280
                             ustensilsResult.push(data[i]);
                         }
                     }
