@@ -1,4 +1,3 @@
-
 class dropdown {
     render() {
         let iconeIngredients = document.querySelector('.dropdown_ingredients .fa-angle-down');
@@ -69,7 +68,7 @@ let openIDrop = function (iClicked) {
         /**Ustensils end */
         dropUH2.style.display = 'flex';
         dropUH2span.style.display = 'block';
-        globalInput.addEventListener('focus', function(event){
+        globalInput.addEventListener('focus', function (event) {
             globalInput.blur();
         });
     } else if (iClickedClassNameSplit == 'fa-angle-up') {
@@ -85,6 +84,9 @@ let openIDrop = function (iClicked) {
         dropIH2span.style.display = 'block';
         dropIH2.style.display = 'flex';
         dropIH2.appendChild(iClicked.target);
+        globalInput.addEventListener('focus', function (event) {
+            globalInput.focus();
+        });
     }
 };
 let openADrop = function (aClicked) {
@@ -147,7 +149,7 @@ let openADrop = function (aClicked) {
         dropUH2.style.display = 'flex';
         dropUH2span.style.display = 'block';
         /**Ustensils end */
-        globalInput.addEventListener('focus', function(event){
+        globalInput.addEventListener('focus', function (event) {
             globalInput.blur();
         });
     } else if (aClickedClassNameSplit == 'fa-angle-up') {
@@ -157,7 +159,7 @@ let openADrop = function (aClicked) {
         aClicked.target.classList.add('fa-angle-down');
         dropUH2.style.display = 'flex';
         dropUH2span.style.display = 'block';
-       dropAH2.style.display = 'flex';
+        dropAH2.style.display = 'flex';
         dropAH2span.style.display = 'block';
         dropAH2.appendChild(aClicked.target);
     }
@@ -222,7 +224,7 @@ let openUDrop = function (uClicked) {
         dropUH2.style.display = 'none';
         dropUH2span.style.display = 'none';
         /**Appliance end */
-        globalInput.addEventListener('focus', function(event){
+        globalInput.addEventListener('focus', function (event) {
             globalInput.blur();
         });
     } else if (uClickedClassNameSplit == 'fa-angle-up') {
