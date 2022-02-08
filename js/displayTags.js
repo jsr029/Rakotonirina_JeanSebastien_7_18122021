@@ -3,6 +3,7 @@ import displayMenu from "./displayMenu.js";
 
 class displayTags {
     render(data) {
+        let globalInput = document.querySelector('.globalSearch');
         let dropIngredientsLista = document.querySelectorAll('.dropdown_ingredients-list a');
         let tagIngredients = document.querySelector('.tagIngredients');
         let underIngredients = document.querySelector('.underSearch_ingredientsTags');
@@ -49,6 +50,9 @@ class displayTags {
                 }
                 dropIH2span.style.display = 'block';
                 /**Ingredients end */
+                globalInput.addEventListener('focus', function(event){
+                    globalInput.blur();
+                });                
             });
         });
         let dropApplianceLista = document.querySelectorAll('.dropdown_appliance-list a');
@@ -73,6 +77,9 @@ class displayTags {
                 }
                 dropAH2span.style.display = 'block';
                 /**Appliance end */
+                globalInput.addEventListener('focus', function(event){
+                    globalInput.blur();
+                });                
             });
         });
         let dropUstensilsLista = document.querySelectorAll('.dropdown_ustensils-list a');
@@ -97,6 +104,9 @@ class displayTags {
                 }
                 dropUH2span.style.display = 'block';
                 /**Ustensils end */
+                globalInput.addEventListener('focus', function(event){
+                    globalInput.blur();
+                });                
             });
         });
         this.closeTag();
