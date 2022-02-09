@@ -161,8 +161,7 @@ class displayTags {
             }
             dropIH2span.style.display = 'block';
             /**Ingredients end */
-            new displayRecipes().render(data);
-            new displayMenu().render(data);
+            location.reload();
         });
         tagAcon.addEventListener('click', function (event) {
             underAppliance.style.display = 'none';
@@ -178,8 +177,7 @@ class displayTags {
             }
             dropAH2span.style.display = 'block';
             /**Appliance end */
-            new displayRecipes().render(data);
-            new displayMenu().render(data);
+            location.reload();
         });
         tagUcon.addEventListener('click', function (event) {
             underUstensils.style.display = 'none';
@@ -195,8 +193,7 @@ class displayTags {
             }
             dropUH2span.style.display = 'block';
             /**Ustensils end */
-            new displayRecipes().render(data);
-            new displayMenu().render(data);
+            location.reload();
         });
     }
 }

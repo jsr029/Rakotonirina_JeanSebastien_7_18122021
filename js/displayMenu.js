@@ -2,6 +2,7 @@ import displayTags from "./displayTags.js";
 
 class displayMenu {
     render(data, input) {
+        console.clear();
         console.log(data);
         let dropIList = document.querySelector('.dropdown_ingredients-list');
         let boxIMenu = [];
