@@ -50,9 +50,9 @@ class displayTags {
                 }
                 dropIH2span.style.display = 'block';
                 /**Ingredients end */
-                globalInput.addEventListener('focus', function(event){
+                globalInput.addEventListener('focus', function (event) {
                     globalInput.blur();
-                });                
+                });
             });
         });
         let dropApplianceLista = document.querySelectorAll('.dropdown_appliance-list a');
@@ -77,9 +77,9 @@ class displayTags {
                 }
                 dropAH2span.style.display = 'block';
                 /**Appliance end */
-                globalInput.addEventListener('focus', function(event){
+                globalInput.addEventListener('focus', function (event) {
                     globalInput.blur();
-                });                
+                });
             });
         });
         let dropUstensilsLista = document.querySelectorAll('.dropdown_ustensils-list a');
@@ -104,9 +104,9 @@ class displayTags {
                 }
                 dropUH2span.style.display = 'block';
                 /**Ustensils end */
-                globalInput.addEventListener('focus', function(event){
+                globalInput.addEventListener('focus', function (event) {
                     globalInput.blur();
-                });                
+                });
             });
         });
         this.closeTag();
@@ -197,21 +197,27 @@ class displayTags {
 }
 let stockTags = function (data, tab) {
     let allTab = [];
+    let ingredientsTab = [];
+    let appliancesTab = [];
+    let ustensilsTab = [];
+
     for (let i = 0; i < data.length; i++) {
-        if (data[i].appliance.toLowerCase().includes(tab.toLowerCase())) {
-            allTab.push(data[i]);
+        if (data[i].appliance.toLowerCase().trim() == tab.toLowerCase()) {
+            appliancesTab.push(data[i]);
         }
         for (let j = 0; j < data[i].ingredients.length; j++) {
-            if (data[i].ingredients[j].ingredient.toLowerCase().includes(tab.toLowerCase())) {
-                allTab.push(data[i]);
+            if (data[i].ingredients[j].ingredient.toLowerCase().trim() == tab.toLowerCase()) {
+                ingredientsTab.push(data[i]);
             }
         }
         for (let h = 0; h < data[i].ustensils.length; h++) {
-            if (data[i].ustensils[h].toLowerCase().includes(tab.toLowerCase())) {
-                allTab.push(data[i]);
+            if (data[i].ustensils[h].toLowerCase().trim() == tab.toLowerCase()) {
+                ustensilsTab.push(data[i]);
             }
         }
     }
+    allTab = [...new Set([...appliancesTab, ...ingredientsTab, ...ustensilsTab])];
+    allTab.sort();
     new displayRecipes().render(allTab);
     new displayMenu().render(allTab);
 };

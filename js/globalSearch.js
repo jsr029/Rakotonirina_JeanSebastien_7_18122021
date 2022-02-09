@@ -45,7 +45,7 @@ class globalSearch {
                 new displayRecipes().removeMessage();
                 new displayRecipes().nbrRecipes(newBaseFilteredConcated);
                 new displayRecipes().render(newBaseFilteredConcated);
-                new displayMenu().render(newBaseFilteredConcated, globalInput);
+                new displayMenu().render(ingredientsResult, applianceResult, ustensilsResult, globalInput);
 
             }
         });

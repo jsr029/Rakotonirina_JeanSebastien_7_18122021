@@ -2,6 +2,7 @@ import displayTags from "./displayTags.js";
 
 class displayMenu {
     render(data, input) {
+        console.log(data);
         let dropIList = document.querySelector('.dropdown_ingredients-list');
         let boxIMenu = [];
         let uniqboxIMenu = [];
@@ -24,28 +25,28 @@ class displayMenu {
         let ustensilsTab = [];
         /**Ustensils end */
         for (let i = 0; i < data.length; i++) {
-            if (data[i].appliance.toLowerCase().includes(input)) {
-                applianceTab.push(data[i].appliance.trim());
+            if (data[i].appliance.toLowerCase() == input) {
+                applianceTab.push(data[i].appliance);
                 baseA.push(data[i]);
             }else{
-                applianceTab.push(data[i].appliance.trim());
+                applianceTab.push(data[i].appliance);
                 baseA.push(data[i]);
             }
             for (let j = 0; j < data[i].ingredients.length; j++) {
-                if (data[i].ingredients[j].ingredient.toLowerCase().includes(input)) {
-                    ingredientsTab.push(data[i].ingredients[j].ingredient.trim());
+                if (data[i].ingredients[j].ingredient.toLowerCase() == input) {
+                    ingredientsTab.push(data[i].ingredients[j].ingredient);
                     baseI.push(data[i]);
                 }else{
-                    ingredientsTab.push(data[i].ingredients[j].ingredient.trim());
+                    ingredientsTab.push(data[i].ingredients[j].ingredient);
                     baseI.push(data[i]);
                 }
             }
             for (let k = 0; k < data[i].ustensils.length; k++) {
-                if (data[i].ustensils[k].toLowerCase().includes(input)) {
-                    ustensilsTab.push(data[i].ustensils[k].trim());
+                if (data[i].ustensils[k].toLowerCase() == input) {
+                    ustensilsTab.push(data[i].ustensils[k]);
                     baseU.push(data[i]);
                 }else{
-                    ustensilsTab.push(data[i].ustensils[k].trim());
+                    ustensilsTab.push(data[i].ustensils[k]);
                     baseU.push(data[i]);
                 }
             }
