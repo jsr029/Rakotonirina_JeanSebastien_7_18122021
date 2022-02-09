@@ -46,12 +46,12 @@ class globalSearch {
                 new displayRecipes().nbrRecipes(newBaseFilteredConcated);
                 new displayRecipes().render(newBaseFilteredConcated);
                 new displayMenu().render(newBaseFilteredConcated, globalInput);
+            } else {
+                recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
+                new displayRecipes().render(recepiesSort);
+                new displayMenu().render(recepiesSort);
             }
-            else{recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
-            new displayRecipes().render(recepiesSort);
-            new displayMenu().render(recepiesSort);
-            }
-           });
+        });
         recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
         new displayRecipes().render(recepiesSort);
         new displayMenu().render(recepiesSort);

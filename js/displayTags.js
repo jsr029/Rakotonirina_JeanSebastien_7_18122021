@@ -1,5 +1,6 @@
 import displayRecipes from "./displayRecipes.js";
 import displayMenu from "./displayMenu.js";
+import recipes from "./recipes.js";
 
 class displayTags {
     render(data) {
@@ -109,14 +110,15 @@ class displayTags {
                 });
             });
         });
-        this.closeTag();
+        this.closeTag(recipes);
     }
-    closeTag() {
+    closeTag(data) {
         let tagIcon = document.querySelector('.tagIcon');
         let underIngredients = document.querySelector('.underSearch_ingredientsTags');
         let tagAcon = document.querySelector('.tagAcon');
         let underAppliance = document.querySelector('.underSearch_applianceTags');
         let tagUcon = document.querySelector('.tagUcon');
+        let tagIngredients = document.querySelector('.tagIngredients');
         let underUstensils = document.querySelector('.underSearch_ustensilsTags');
         /**Ingredients */
         let dropIH2 = document.querySelector('.dropdown_ingredients h2');
@@ -159,7 +161,8 @@ class displayTags {
             }
             dropIH2span.style.display = 'block';
             /**Ingredients end */
-            location.reload();
+            new displayRecipes().render(data);
+            new displayMenu().render(data);
         });
         tagAcon.addEventListener('click', function (event) {
             underAppliance.style.display = 'none';
@@ -175,7 +178,8 @@ class displayTags {
             }
             dropAH2span.style.display = 'block';
             /**Appliance end */
-            location.reload();
+            new displayRecipes().render(data);
+            new displayMenu().render(data);
         });
         tagUcon.addEventListener('click', function (event) {
             underUstensils.style.display = 'none';
@@ -191,7 +195,8 @@ class displayTags {
             }
             dropUH2span.style.display = 'block';
             /**Ustensils end */
-            location.reload();
+            new displayRecipes().render(data);
+            new displayMenu().render(data);
         });
     }
 }
