@@ -40,17 +40,13 @@ class globalSearch {
                         }
                     }
                 }
-                    newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...descriptionResult, ...applianceResult, ...ustensilsResult])];
-                    newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
-                    new displayRecipes().removeMessage();
-                    new displayRecipes().nbrRecipes(newBaseFilteredConcated);
-                    new displayRecipes().render(newBaseFilteredConcated);
-                    new displayMenu().render(newBaseFilteredConcated, globalInput);
-            } else {
+                newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...descriptionResult, ...applianceResult, ...ustensilsResult])];
+                newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
                 new displayRecipes().removeMessage();
-                recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
-                new displayRecipes().render(recepiesSort);
-                new displayMenu().render(recepiesSort);
+                new displayRecipes().nbrRecipes(newBaseFilteredConcated);
+                new displayRecipes().render(newBaseFilteredConcated);
+                new displayMenu().render(newBaseFilteredConcated, globalInput);
+
             }
         });
         recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
