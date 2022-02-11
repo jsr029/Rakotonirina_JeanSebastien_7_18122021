@@ -7,7 +7,7 @@
 Les Petits Plats est un moteur de recherche qui permet de trouver rapidement des recettes correspondant à l’entrée utilisateur dans : le titre de
 la recette, la liste des ingrédients de la recette, la description de la recette.
 
-## 1. Le cas d’utilisation commence lorsque l’utilisateur entre au moins 3 caractères dans la barre de recherche principale.
+## 1. Le cas d’utilisation
 <div align="center">
   <img src="./cas/Cas_d_utilisation1.jpg" width="200" alt="cas d'utilisation 1/4">
   <img src="./cas/Cas_d_utilisation2.jpg" width="200" alt="cas d'utilisation 2/4">
