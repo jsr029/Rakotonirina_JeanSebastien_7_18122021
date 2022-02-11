@@ -63,3 +63,10 @@ see Test [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/
 ## Légendes 
 - Code Block1 : boucles for... et conditions if... else if...
 - Code Block2 : fonctions natives foreach...map...filter...
+
+## Axes d'amélioration :
+- Utiliser des slides pour votre présentation
+- Revenir à la liste des recettes precedentes lorsqu'on supprime un tag
+- Pensez au responsive
+- Revoir les algorigrammes
+- Revoir l'utilisation de classe (Majuscule au debut du nom de la classe et du fichier)
