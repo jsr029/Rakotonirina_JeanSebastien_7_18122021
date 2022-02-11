@@ -42,7 +42,7 @@ see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_
 ## Algorigram
 see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/P7algorigram.svg)
 <p align="center">
-<img src="./P7algorigram.svg" width="800" alt="Structure">
+<img src="./P7algorigram.png" width="800" alt="Structure">
 </p>
 
 ## Site
