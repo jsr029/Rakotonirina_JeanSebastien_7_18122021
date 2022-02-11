@@ -8,6 +8,11 @@ Les Petits Plats est un moteur de recherche qui permet de trouver rapidement des
 la recette, la liste des ingrédients de la recette, la description de la recette.
 
 ## 1. Le cas d’utilisation commence lorsque l’utilisateur entre au moins 3 caractères dans la barre de recherche principale.
+<div align="center">
+  <img src="./cas/Cas_d_utilisation1.jpg" width="800" alt="Algo">
+  <img src="./cas/Cas_d_utilisation2.jpg" width="800" alt="Algo">
+  <img src="./cas/Cas_d_utilisation3.jpg" width="800" alt="Algo">
+</div>
 
 
 L'application consiste en une page simple, réalisée avec Javascript (sans Framework) utilisant des fonctions natives (foreach, map, filter,...) dans la branch Algo2 et des boucles (for), des conditions (if, else if) dans la branch Master, au niveau de l'input principal, comme demandé et vu avec mon Mentor. 
