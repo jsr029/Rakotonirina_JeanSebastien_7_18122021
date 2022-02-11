@@ -8,33 +8,7 @@ Les Petits Plats est un moteur de recherche qui permet de trouver rapidement des
 la recette, la liste des ingrédients de la recette, la description de la recette.
 
 ## 1. Le cas d’utilisation commence lorsque l’utilisateur entre au moins 3 caractères dans la barre de recherche principale.
-## 2. Le système recherche des recettes correspondant à l’entrée utilisateur dans : le titre de la recette, la liste des ingrédients de la recette, la description de la recette.
-## 3. L’interface est actualisée avec les résultats de recherche
-## 4. Les champs de recherche avancée sont actualisés avec les informations ingrédients, ustensiles, appareil des différentes recettes restantes
-## 5. L’utilisateur précise sa recherche grâce à l’un des champs : ingrédients, ustensiles, appareil.
-## 6. Au fur et à mesure du remplissage les mots clés ne correspondant pas à la frappe dans le champ disparaissent. Par exemple, si l’utilisateur entre “coco” dans la liste d’ingrédients, seuls vont rester “noix de coco” et “lait de coco”.
-## 7. L’utilisateur choisit un mot clé dans le champ
-## 8. Le mot clé apparaît sous forme de tag sous la recherche principale
-## 9. Les résultats de recherche sont actualisés, ainsi que les éléments disponibles dans les champs de recherche avancée
-## 10. L’utilisateur sélectionne une recette
 
-## Scénario alternatif A1
-## A1. Aucune recette correspondante à la recherche. L'enchaînement A1 commence au point 3 du scénario nominal 
-## 3. L’interface affiche « Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc.
-
-## Scénario alternatif A2
-## A2. L’utilisateur commence sa recherche par un tag 
-L'enchaînement A2 commence au point 1 du scénario nominal et reprend au point 9 du scénario nominal.
-## 1. L’utilisateur commence la recherche par un tag.
-## 2. Les résultats de recherche sont actualisés, ainsi que les éléments disponibles dans les champs de recherche avancée (9 du cas principal)
-
-## Scénario alternatif A3
-## A3. L’utilisateur ajoute d’autres tags pour la recherche avancée. L'enchaînement A3 commence au point 9 du scénario nominal. Cet enchaînement peut se répéter autant que nécessaire
-## 10. L’utilisateur précise sa recherche grâce à l’un des champs : ingrédients, ustensiles, appareil.
-## 11. Au fur et à mesure du remplissage les mots clés ne correspondant pas à la frappe dans le champ disparaissent
-## 12. L’utilisateur choisit un mot clé dans le champ
-## 13. Le mot clé apparaît sous forme de tag sous la recherche principale
-## 14. Les résultats de recherche sont actualisés, ainsi que les éléments disponibles dans les champs de recherche avancée
 
 L'application consiste en une page simple, réalisée avec Javascript (sans Framework) utilisant des fonctions natives (foreach, map, filter,...) dans la branch Algo2 et des boucles (for), des conditions (if, else if) dans la branch Master, au niveau de l'input principal, comme demandé et vu avec mon Mentor. 
 
@@ -83,3 +57,10 @@ see Test [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/
 ## Légendes 
 - Code Block1 : boucles for... et conditions if... else if...
 - Code Block2 : fonctions natives foreach...map...filter...
+
+## Axes d'amélioration :
+- Utiliser des slides pour votre présentation
+- Revenir à la liste des recettes precedentes lorsqu'on supprime un tag
+- Pensez au responsive
+- Revoir les algorigrammes
+- Revoir l'utilisation de classe (Majuscule au debut du nom de la classe et du fichier)
