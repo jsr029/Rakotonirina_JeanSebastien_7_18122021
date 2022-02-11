@@ -1,5 +1,7 @@
 import DisplayRecipes from "./DisplayRecipes.js";
 import DisplayMenu from "./DisplayMenu.js";
+import recipes from "./recipes.js";
+import displayRecipes from "./DisplayRecipes.js";
 
 class DisplayTags {
     render(data) {
@@ -99,9 +101,9 @@ class DisplayTags {
                 /**Ustensils end */
             });
         });
-        this.closeTag();
+        this.closeTag(recipes);
     }
-    closeTag() {
+    closeTag(data) {
         let tagIcon = document.querySelector('.tagIcon');
         let underIngredients = document.querySelector('.underSearch_ingredientsTags');
         let tagAcon = document.querySelector('.tagAcon');
@@ -132,7 +134,19 @@ class DisplayTags {
         let applianceList = document.querySelector('.dropdown_appliance-list');
         let dropAH2i = document.querySelector('.dropdown_appliance h2 i');
         /**Appliance End */
+        let tagI = underIngredients.childNodes[1].innerHTML;
+        let tagA = underAppliance.childNodes[1].innerHTML;
+        let tagU = underUstensils.childNodes[1].innerHTML;
+
+        let lessI = [];
+        let lessA = [];
+        let lessU = [];
+        let allLess = [];
         tagIcon.addEventListener('click', function (event) {
+            allLess = [];
+            lessA = [];
+            lessI = [];
+            lessU = [];
             underIngredients.style.display = 'none';
             tagIcon.style.displayTags = 'none';
             /**Ingredients */
@@ -149,9 +163,24 @@ class DisplayTags {
             }
             dropIH2span.style.display = 'block';
             /**Ingredients end */
-            location.reload();
+            //location.reload();
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].appliance.includes(tagA)) {
+                    lessA.push(data[i]);
+                }
+                if (data[i].ustensils.includes(tagU)) {
+                    lessU.push(data[i]);
+                }
+            }
+            allLess = [...new Set([...lessA, ...lessU])];
+            new DisplayRecipes().render(allLess);
+            new DisplayMenu().render(allLess);
         });
         tagAcon.addEventListener('click', function (event) {
+            allLess = [];
+            lessA = [];
+            lessI = [];
+            lessU = [];
             underAppliance.style.display = 'none';
             tagAcon.style.displayTags = 'none';
             /**Appliance */
@@ -165,9 +194,26 @@ class DisplayTags {
             }
             dropAH2span.style.display = 'block';
             /**Appliance end */
-            location.reload();
+            //location.reload();
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].ustensils.includes(tagU)) {
+                    lessU.push(data[i]);
+                }
+                for (let k = 0; k < data[i].ingredients.length; k++) {
+                    if (data[i].ingredients[k].ingredient.includes(tagI)) {
+                        lessI.push(data[i]);
+                    }
+                }
+            }
+            allLess = [...new Set([...lessI, ...lessU])];
+            new DisplayRecipes().render(allLess);
+            new DisplayMenu().render(allLess);
         });
         tagUcon.addEventListener('click', function (event) {
+            allLess = [];
+            lessA = [];
+            lessI = [];
+            lessU = [];
             underUstensils.style.display = 'none';
             tagUcon.style.displayTags = 'none';
             /**Ustensils */
@@ -181,12 +227,35 @@ class DisplayTags {
             }
             dropUH2span.style.display = 'block';
             /**Ustensils end */
-            location.reload();
+            //location.reload();
+            for (let i = 0; i < data.length; i++) {
+                for (let k = 0; k < data[i].ingredients.length; k++) {
+                    if (data[i].ingredients[k].ingredient.includes(tagI)) {
+                        lessI.push(data[i]);
+                    }
+                }
+                if (data[i].appliance.includes(tagA)) {
+                    lessA.push(data[i]);
+                }
+            }
+            allLess = [...new Set([...lessA, ...lessI])];
+            new DisplayRecipes().render(allLess);
+            new DisplayMenu().render(allLess);
         });
+        /*   allLess = [...new Set([...lessI, ...lessA, ...lessU])];
+           new DisplayRecipes().render(allLess);
+           new DisplayMenu().render(allLess);*/
     }
 }
 let stockTags = function (data, tab) {
+    let underIngredients = document.querySelector('.underSearch_ingredientsTags');
+    let underAppliance = document.querySelector('.underSearch_applianceTags');
+    let underUstensils = document.querySelector('.underSearch_ustensilsTags');
+    let tagI = underIngredients.childNodes[1].innerHTML;
+    let tagA = underAppliance.childNodes[1].innerHTML;
+    let tagU = underUstensils.childNodes[1].innerHTML;
     let allTab = [];
+
     for (let i = 0; i < data.length; i++) {
         if (data[i].appliance.toLowerCase().includes(tab.toLowerCase())) {
             allTab.push(data[i]);
