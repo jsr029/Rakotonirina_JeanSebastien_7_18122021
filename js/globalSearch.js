@@ -1,6 +1,6 @@
-import displayRecipes from "./displayRecipes.js";
-import displayMenu from './displayMenu.js';
-class globalSearch {
+import DisplayRecipes from "./DisplayRecipes.js";
+import DisplayMenu from './DisplayMenu.js';
+class GlobalSearch {
     render(data) {
         let search = document.querySelector(".globalSearch");
         let nameResult = [];
@@ -56,21 +56,21 @@ class globalSearch {
                     }
                     newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...descriptionResult])];
                     newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
-                    new displayRecipes().removeMessage();
-                    new displayRecipes().nbrRecipes(newBaseFilteredConcated);
-                    new displayRecipes().render(newBaseFilteredConcated);
-                    new displayMenu().render(newBaseFilteredConcated, globalInput);
+                    new DisplayRecipes().removeMessage();
+                    new DisplayRecipes().nbrRecipes(newBaseFilteredConcated);
+                    new DisplayRecipes().render(newBaseFilteredConcated);
+                    new DisplayMenu().render(newBaseFilteredConcated, globalInput);
                 });
             } else {
-                new displayRecipes().removeMessage();
+                new DisplayRecipes().removeMessage();
                 recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
-                new displayRecipes().render(recepiesSort);
-                new displayMenu().render(recepiesSort);
+                new DisplayRecipes().render(recepiesSort);
+                new DisplayMenu().render(recepiesSort);
             }
         });
         recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
-        new displayRecipes().render(recepiesSort);
-        new displayMenu().render(recepiesSort);
+        new DisplayRecipes().render(recepiesSort);
+        new DisplayMenu().render(recepiesSort);
     }
 }
-export default globalSearch;
+export default GlobalSearch;

@@ -1,7 +1,7 @@
-import dropdown from './dropdown.js';
-import globalSearch from './globalSearch.js';
+import Dropdown from './Dropdown.js';
+import GlobalSearch from './GlobalSearch.js';
 import recipes from './recipes.js';
 import dropSearch from './dropSearch.js';
-new dropdown().render();
-new globalSearch().render(recipes);
+new Dropdown().render();
+new GlobalSearch().render(recipes);
 dropSearch();

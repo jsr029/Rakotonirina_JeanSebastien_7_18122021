@@ -1,7 +1,7 @@
-import displayRecipes from "./displayRecipes.js";
-import displayMenu from "./displayMenu.js";
+import DisplayRecipes from "./DisplayRecipes.js";
+import DisplayMenu from "./DisplayMenu.js";
 
-class displayTags {
+class DisplayTags {
     render(data) {
         let dropIngredientsLista = document.querySelectorAll('.dropdown_ingredients-list a');
         let tagIngredients = document.querySelector('.tagIngredients');
@@ -202,7 +202,7 @@ let stockTags = function (data, tab) {
             }
         }
     }
-    new displayRecipes().render(allTab);
-    new displayMenu().render(allTab);
+    new DisplayRecipes().render(allTab);
+    new DisplayMenu().render(allTab);
 };
-export default displayTags;
+export default DisplayTags;

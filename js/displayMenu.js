@@ -1,6 +1,6 @@
-import displayTags from "./displayTags.js";
+import DisplayTags from "./DisplayTags.js";
 
-class displayMenu {
+class DisplayMenu {
     render(data, input) {
         let dropIList = document.querySelector('.dropdown_ingredients-list');
         let boxIMenu = [];
@@ -57,8 +57,8 @@ class displayMenu {
         });
         dropUList.innerHTML = boxUMenu.join('');
         let baseTab = [...new Set([...baseU, ...baseI, ...baseA])];
-        new displayTags().render(baseTab);
+        new DisplayTags().render(baseTab);
     }
 
 }
-export default displayMenu;
+export default DisplayMenu;
