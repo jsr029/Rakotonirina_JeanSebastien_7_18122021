@@ -9,10 +9,10 @@ la recette, la liste des ingrédients de la recette, la description de la recett
 
 ## Cas d'utilisation
 <ul align="center" style="list-style-type:none">
-  <li><img src="./cas/Cas_d_utilisation1.jpg" width="800" alt="cas d'utilisation 1/4"></li>
-  <li><img src="./cas/Cas_d_utilisation2.jpg" width="800" alt="cas d'utilisation 2/4"></li>
-  <li><img src="./cas/Cas_d_utilisation3.jpg" width="800" alt="cas d'utilisation 3/4"></li>
-  <li><img src="./cas/Cas_d_utilisation4.jpg" width="800" alt="cas d'utilisation 4/4"></li>
+  <li><img src="./cas/Cas_d_utilisation1.jpg" width="220" alt="cas d'utilisation 1/4"></li>
+  <li><img src="./cas/Cas_d_utilisation2.jpg" width="220" alt="cas d'utilisation 2/4"></li>
+  <li><img src="./cas/Cas_d_utilisation3.jpg" width="220" alt="cas d'utilisation 3/4"></li>
+  <li><img src="./cas/Cas_d_utilisation4.jpg" width="220" alt="cas d'utilisation 4/4"></li>
 </ul>
 
 
