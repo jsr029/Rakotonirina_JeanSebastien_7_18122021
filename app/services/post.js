@@ -6,7 +6,7 @@ MyApp.factory('Post', function ($http, $q, $timeout) {
             if (factory.posts !== false) {
                 deferred.resolve(factory.posts);
             } else {
-                $http.get('../../json/recipes.json')
+                $http.get('https://jsr029.github.io/Rakotonirina_JeanSebastien_7_18122021/json/recipes.json')
                     .success(function (data, status) {
                         factory.posts = data;
                         $timeout(function () {
