@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    position: relative;
 
     /* Dropdown*/
     .dropdown {
@@ -13,17 +14,16 @@
         margin: 0;
         z-index: 2000;
         height: 35px;
-
         &_ingredients {
             h2 {
-                background: #3282F7;
+                background: #3282f7;
                 border-radius: 5px;
             }
 
             &-list {
                 display: none;
                 grid-template-columns: repeat(3, 200px);
-                background: #3282F7;
+                background: #3282f7;
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
 
@@ -34,14 +34,14 @@
 
                 a:hover {
                     width: 180px;
-                    background: lighten(#3282F7, 10%);
+                    background: lighten(#3282f7, 10%);
                 }
             }
         }
 
         &_appliance {
             h2 {
-                background: #68D9A4;
+                background: #68d9a4;
                 border-radius: 5px;
             }
 
@@ -50,7 +50,7 @@
                 grid-template-columns: repeat(3, 200px);
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
-                background: #68D9A4;
+                background: #68d9a4;
 
                 a {
                     width: 200px;
@@ -58,14 +58,14 @@
 
                 a:hover {
                     width: 180px;
-                    background: lighten(#68D9A4, 10%);
+                    background: lighten(#68d9a4, 10%);
                 }
             }
         }
 
         &_ustensils {
             h2 {
-                background: #ED6454;
+                background: #ed6454;
                 border-radius: 5px;
             }
 
@@ -74,7 +74,7 @@
                 grid-template-columns: repeat(3, 200px);
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
-                background: #ED6454;
+                background: #ed6454;
 
                 a {
                     width: 200px;
@@ -82,7 +82,7 @@
 
                 a:hover {
                     width: 180px;
-                    background: lighten(#ED6454, 10%);
+                    background: lighten(#ed6454, 10%);
                 }
             }
         }
@@ -93,7 +93,6 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-
         }
 
         i {
@@ -106,7 +105,6 @@
         &_appliance,
         &_ustensils {
             min-width: 200px;
-
         }
 
         &_ingredients,
@@ -175,7 +173,7 @@
             }
         }
     }
-    .nbrRecipes{
+    .nbrRecipes {
         margin-top: 52px;
         display: flex;
         flex-direction: row;
@@ -226,4 +224,21 @@
             }
         }
     }
+    @media screen and (max-width: 626px) {
+        .dropdown, .recipes {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .dropdown{
+            row-gap: 10px;
+            margin-top: 80px;
+        }
+    }
 }
+    @media screen and (max-width: 626px) {
+        .entete{
+            max-width: 95%;
+        }
+    }

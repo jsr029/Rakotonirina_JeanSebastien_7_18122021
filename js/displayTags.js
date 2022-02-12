@@ -32,6 +32,37 @@ class DisplayTags {
         let applianceList = document.querySelector('.dropdown_appliance-list');
         let dropAH2i = document.querySelector('.dropdown_appliance h2 i');
         /**Appliance End */
+        let underAppliance = document.querySelector('.underSearch_applianceTags');
+        let underUstensils = document.querySelector('.underSearch_ustensilsTags');
+        let tagI = underIngredients.childNodes[1].innerHTML;
+        let tagA = underAppliance.childNodes[1].innerHTML;
+        let tagU = underUstensils.childNodes[1].innerHTML;
+
+        let lessI = [];
+        let lessA = [];
+        let lessU = [];
+        let allLess = [];
+
+        let displayR = new DisplayRecipes();
+        let displayM = new DisplayMenu();
+
+        data.forEach(elm => {
+            elm.ingredients.filter(function (ing) {
+                if (ing.ingredient.toLowerCase().includes(tagI.toLowerCase())) {
+                    lessI.push(elm);
+                }
+            });
+            elm.ustensils.filter(function (ust) {
+                if (ust.toLowerCase().includes(tagU.toLowerCase())) {
+                    lessU.push(elm);
+                }
+            });
+            if (elm.appliance.toLowerCase().includes(tagA.toLowerCase())) {
+                lessA.push(elm);
+            }
+            allLess = [...new Set([...lessI, ...lessA, ...lessU])];
+            allLess.sort();
+        });
         dropIngredientsLista.forEach(elm => {
             elm.addEventListener("click", function (event) {
                 underIngredients.style.display = 'flex';
@@ -55,7 +86,6 @@ class DisplayTags {
         });
         let dropApplianceLista = document.querySelectorAll('.dropdown_appliance-list a');
         let tagAppliance = document.querySelector('.tagAppliance');
-        let underAppliance = document.querySelector('.underSearch_applianceTags');
         dropApplianceLista.forEach(elm => {
             elm.addEventListener("click", function (event) {
                 underAppliance.style.display = 'flex';
@@ -79,7 +109,6 @@ class DisplayTags {
         });
         let dropUstensilsLista = document.querySelectorAll('.dropdown_ustensils-list a');
         let tagUstensils = document.querySelector('.tagUstensils');
-        let underUstensils = document.querySelector('.underSearch_ustensilsTags');
         dropUstensilsLista.forEach(elm => {
             elm.addEventListener("click", function (event) {
                 underUstensils.style.display = 'flex';
@@ -142,11 +171,29 @@ class DisplayTags {
         let lessA = [];
         let lessU = [];
         let allLess = [];
+
+        let displayR = new DisplayRecipes();
+        let displayM = new DisplayMenu();
+
+        data.forEach(elm => {
+            elm.ingredients.filter(function (ing) {
+                if (ing.ingredient.toLowerCase().includes(tagI.toLowerCase())) {
+                    lessI.push(elm);
+                }
+            });
+            elm.ustensils.filter(function (ust) {
+                if (ust.toLowerCase().includes(tagU.toLowerCase())) {
+                    lessU.push(elm);
+                }
+            });
+            if (elm.appliance.toLowerCase().includes(tagA.toLowerCase())) {
+                lessA.push(elm);
+            }
+            allLess = [...new Set([...lessI, ...lessA, ...lessU])];
+            allLess.sort();
+        });
         tagIcon.addEventListener('click', function (event) {
-            allLess = [];
-            lessA = [];
-            lessI = [];
-            lessU = [];
+            console.log('Hello');
             underIngredients.style.display = 'none';
             tagIcon.style.displayTags = 'none';
             /**Ingredients */
@@ -164,23 +211,10 @@ class DisplayTags {
             dropIH2span.style.display = 'block';
             /**Ingredients end */
             //location.reload();
-            for (let i = 0; i < data.length; i++) {
-                if (data[i].appliance.includes(tagA)) {
-                    lessA.push(data[i]);
-                }
-                if (data[i].ustensils.includes(tagU)) {
-                    lessU.push(data[i]);
-                }
-            }
-            allLess = [...new Set([...lessA, ...lessU])];
-            new DisplayRecipes().render(allLess);
-            new DisplayMenu().render(allLess);
+            displayR.render(allLess);
+            displayM.render(allLess);
         });
         tagAcon.addEventListener('click', function (event) {
-            allLess = [];
-            lessA = [];
-            lessI = [];
-            lessU = [];
             underAppliance.style.display = 'none';
             tagAcon.style.displayTags = 'none';
             /**Appliance */
@@ -195,25 +229,10 @@ class DisplayTags {
             dropAH2span.style.display = 'block';
             /**Appliance end */
             //location.reload();
-            for (let i = 0; i < data.length; i++) {
-                if (data[i].ustensils.includes(tagU)) {
-                    lessU.push(data[i]);
-                }
-                for (let k = 0; k < data[i].ingredients.length; k++) {
-                    if (data[i].ingredients[k].ingredient.includes(tagI)) {
-                        lessI.push(data[i]);
-                    }
-                }
-            }
-            allLess = [...new Set([...lessI, ...lessU])];
-            new DisplayRecipes().render(allLess);
-            new DisplayMenu().render(allLess);
+            displayR.render(allLess);
+            displayM.render(allLess);
         });
         tagUcon.addEventListener('click', function (event) {
-            allLess = [];
-            lessA = [];
-            lessI = [];
-            lessU = [];
             underUstensils.style.display = 'none';
             tagUcon.style.displayTags = 'none';
             /**Ustensils */
@@ -228,19 +247,8 @@ class DisplayTags {
             dropUH2span.style.display = 'block';
             /**Ustensils end */
             //location.reload();
-            for (let i = 0; i < data.length; i++) {
-                for (let k = 0; k < data[i].ingredients.length; k++) {
-                    if (data[i].ingredients[k].ingredient.includes(tagI)) {
-                        lessI.push(data[i]);
-                    }
-                }
-                if (data[i].appliance.includes(tagA)) {
-                    lessA.push(data[i]);
-                }
-            }
-            allLess = [...new Set([...lessA, ...lessI])];
-            new DisplayRecipes().render(allLess);
-            new DisplayMenu().render(allLess);
+            displayR.render(allLess);
+            displayM.render(allLess);
         });
         /*   allLess = [...new Set([...lessI, ...lessA, ...lessU])];
            new DisplayRecipes().render(allLess);
