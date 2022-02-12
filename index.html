@@ -11,8 +11,8 @@
     <link rel="icon" href="favicon.ico">
 </head>
 
-<body>
-    <div class="global">
+<body ng-app="MyApp">
+    <div class="global" ng-controller="PostsCtrl" ng-init="posts.length > 0">
         <header class="entete">
             <div class="entete_logo">
                 <img src="./img/Logo.png" alt="logo les petits plats">
@@ -21,8 +21,9 @@
                 <h1>Les petits plats</h1>
             </div>
             <div class="entete_searchInput">
-                <input type="text" class="globalSearch" aria-label='recipes global search'
-                    placeholder="Rechercher un ingrédient, un appareil ou un ustensile...">
+                <input type="text" class="globalSearch" ng-model="globalSearch.name"
+                    aria-label='recipes global search'
+                    placeholder="Rechercher un ingrédient, un appareil ou un ustensile..." ng-minlength="3">
                 <i class="fa fa-search"></i>
             </div>
         </header>
@@ -45,36 +46,84 @@
                 <div class="dropdown_ingredients">
                     <div class="dropdown_ingredients-input">
                         <input type="text" class="ingredientSearch" aria-label="search ingredients"
-                            placeholder="Rechercher un ingredient...">
+                            placeholder="Rechercher un ingredient..." ng-model="globalSearch.ingredients">
                     </div>
                     <h2><span>Ingrédients</span><i class="fa fa-angle-down"></i>
                     </h2>
-                    <div class="dropdown_ingredients-list"></div>
+                    <div class="dropdown_ingredients-list">
+                        <ul ng-repeat="r in posts | filter : globalSearch.ingredients">
+                            <li ng-repeat="i in r.ingredients | orderBy : '+i.ingredient' | unique : 'i.ingredient'">
+                                <a
+                                    href="javascript:void(0)">{{i.ingredient.length > 20 ? i.ingredient.substring(0, 20)+'...':i.ingredient}}</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="dropdown_appliance">
                     <div class="dropdown_appliance-input">
                         <input type="text" class="applianceSearch" aria-label="search appliance"
-                            placeholder="Rechercher un appareil...">
+                            placeholder="Rechercher un appareil..." ng-model="globalSearch.appliance">
                     </div>
                     <h2><span>Appareil</span><i class="fa fa-angle-down"></i>
                     </h2>
-                    <div class="dropdown_appliance-list"></div>
+                    <div class="dropdown_appliance-list">
+                        <a ng-repeat="a in posts | filter : globalSearch.appliance | unique : 'appliance'"
+                            href="javascript:void(0)">{{a.appliance}}</a>
+                    </div>
                 </div>
                 <div class="dropdown_ustensils">
                     <div class="dropdown_ustensils-input">
                         <input type="text" class="ustensilSearch" aria-label="search ustensils"
-                            placeholder="Rechercher un ustensile... ">
+                            placeholder="Rechercher un ustensile... " ng-model="globalSearch.ustensils">
                     </div>
                     <h2><span>Ustensiles</span><i class="fa fa-angle-down"></i>
                     </h2>
-                    <div class="dropdown_ustensils-list"></div>
+                    <div class="dropdown_ustensils-list">
+                        <ul ng-repeat="us in posts | filter : globalSearch.ustensils">
+                            <li ng-repeat=" u in us.ustensils | orderBy : '+ustensils' | unique : 'ustensils'">
+                            <a href="javascript:void(0)">{{u}}</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="nbrRecipes"></div>
-            <div class="recipes"></div>
+            <div class="recipes">
+                <atricle class="recipes_bloc" ng-show="!posts.length>0">
+                    No Datas.
+                </atricle>
+                <article class="recipes_bloc" ng-show="posts.length>0" ng-repeat="recipe in posts | 
+                filter : globalSearch | 
+                orderBy : '+name'">
+                    <div class="recipes_bloc-img">
+                    </div>
+                    <div class="recipes_bloc-titre">
+                        <h2>
+                            <span>{{recipe.name}}</span>
+                            <span><i class="far fa-clock"></i>
+                                {{recipe.time + 'min'}}</span>
+                        </h2>
+                    </div>
+                    <div class="recipes_bloc-description">
+                        {{recipe.description}}
+                    </div>
+                    <div class="recipes_bloc-ingredients" ">
+                        <ul ng-repeat=" ing in recipe.ingredients">
+                        <li>
+                            {{ing.ingredient}} {{ing.quantity?" : " + ing.quantity:''}} {{ing.unit}}
+                        </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
         </main>
-        <script type="module" src="./js/index.js"></script>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-route.min.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./app/services/post.js"></script>
+    <script src="./app/controllers/posts.js"></script>
+    <script src="./app/dropdown.js"></script>
 </body>
 
 </html>

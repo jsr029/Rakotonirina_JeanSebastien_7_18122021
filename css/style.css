@@ -377,7 +377,7 @@ main {
 }
 .container .nbrRecipes {
   margin-top: 52px;
-  display: flex;
+  display: block;
   flex-direction: row;
   font-family: "Lato";
   font-size: 22px;
