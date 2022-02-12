@@ -193,6 +193,7 @@ class DisplayTags {
             allLess.sort();
         });
         tagIcon.addEventListener('click', function (event) {
+            event.preventDefault();
             console.log('Hello');
             underIngredients.style.display = 'none';
             tagIcon.style.displayTags = 'none';
@@ -215,6 +216,7 @@ class DisplayTags {
             displayM.render(allLess);
         });
         tagAcon.addEventListener('click', function (event) {
+            event.preventDefault();
             underAppliance.style.display = 'none';
             tagAcon.style.displayTags = 'none';
             /**Appliance */
@@ -233,6 +235,7 @@ class DisplayTags {
             displayM.render(allLess);
         });
         tagUcon.addEventListener('click', function (event) {
+            event.preventDefault();
             underUstensils.style.display = 'none';
             tagUcon.style.displayTags = 'none';
             /**Ustensils */
