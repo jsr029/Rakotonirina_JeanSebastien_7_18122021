@@ -22,7 +22,7 @@ function refreshRecipesDisplay(filtered) {
                     </ul>
                 </div>
             `;
-            grid ? grid.appendChild(article) :'';
+            grid ? grid.appendChild(article) : null;
         });
     }
 
