@@ -44,8 +44,9 @@ Conclusion, j'ai toujours ce plaisir particulier, à découvrir chaque nouveau p
 
 ## Fiche d'investigation
 
-```javascript
 see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-1/Fiche.jpg)
+
+```javascript
 <p align="center">
 <img src="./Fiche.jpg" width="800" alt="Fiche">
 </p>
@@ -53,8 +54,9 @@ see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_
 
 ## Algorigram
 
-```javascript
 see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/P7algorigram.png)
+
+```javascript
 <p align="center">
 <img src="./P7algorigram.png" width="800" alt="Algo">
 </p>
@@ -62,14 +64,13 @@ see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_
 
 ## Site
 
-```javascript
 see Demo [here](https://jsr029.github.io/Rakotonirina_JeanSebastien_7_18122021)
-```
 
 ## Structure
 
-```javascript
 see Structure [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/structure2.svg)
+
+```javascript
 <p align="center">
 <img src="./structure2.svg" width="800" alt="Structure">
 </p>
@@ -77,8 +78,9 @@ see Structure [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_1812
 
 ## jsBench
 
-```javascript
 see Test [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/P7jsBecnhEntirePage.JPG)
+
+```javascript
 <p align="center">
 <img src="./P7jsBecnhEntirePage.JPG" width="800" alt="jsBench">
 </p>
