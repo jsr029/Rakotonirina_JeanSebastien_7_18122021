@@ -1,0 +1,70 @@
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: $gap;
+  margin-top: 30px;
+
+  article {
+    background: $light;
+    border-radius: $radius;
+    overflow: hidden;
+    height: 364px;
+    display: flex;
+    flex-direction: column;
+
+    .img-placeholder {
+      height: 170px;
+      background: #ddd;
+    }
+
+    .content {
+      padding: 15px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h3 {
+        font-size: 1.3rem;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .time {
+          font-size: 1.1rem;
+          color: $dark;
+          i { margin-right: 5px; }
+        }
+      }
+
+      .description {
+        font-size: 0.95rem;
+        color: #666;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+
+      .ingredients-list {
+        columns: 2;
+        font-size: 0.9rem;
+        li {
+          margin-bottom: 4px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}
+
+.stats {
+  margin: 20px 0;
+  font-weight: bold;
+  color: $dark;
+}

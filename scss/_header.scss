@@ -1,0 +1,45 @@
+header.entete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+
+  .entete_logo img {
+    height: 50px;
+  }
+
+  h1 {
+    color: #d04f4f;
+    font-size: 2.5rem;
+    margin: 15px 0;
+  }
+
+  .entete_searchInput {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+
+    input.globalSearch {
+      width: 100%;
+      padding: 22px 50px 22px 25px;
+      background: $grey;
+      border: none;
+      border-radius: $radius;
+      font-size: 1.1rem;
+      font-family: $font-secondary;
+
+      &::placeholder {
+        color: #999;
+      }
+    }
+
+    i.fa-search {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.8rem;
+      color: $dark;
+    }
+  }
+}
