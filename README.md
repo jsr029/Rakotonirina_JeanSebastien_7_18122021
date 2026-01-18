@@ -16,7 +16,7 @@ la recette, la liste des ingrédients de la recette, la description de la recett
 
 ## 1. Cas d’utilisation
 
-```text
+```javascript
 <div align="center">
   <img src="./cas/Cas_d_utilisation1.jpg" width="220" alt="cas d'utilisation 1/4">
   <img src="./cas/Cas_d_utilisation2.jpg" width="220" alt="cas d'utilisation 2/4">
@@ -44,7 +44,7 @@ Conclusion, j'ai toujours ce plaisir particulier, à découvrir chaque nouveau p
 
 ## Fiche d'investigation
 
-```text
+```javascript
 see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-1/Fiche.jpg)
 <p align="center">
 <img src="./Fiche.jpg" width="800" alt="Fiche">
@@ -53,7 +53,7 @@ see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_
 
 ## Algorigram
 
-```text
+```javascript
 see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/P7algorigram.png)
 <p align="center">
 <img src="./P7algorigram.png" width="800" alt="Algo">
@@ -62,13 +62,13 @@ see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_
 
 ## Site
 
-```text
+```javascript
 see Demo [here](https://jsr029.github.io/Rakotonirina_JeanSebastien_7_18122021)
 ```
 
 ## Structure
 
-```text
+```javascript
 see Structure [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/structure2.svg)
 <p align="center">
 <img src="./structure2.svg" width="800" alt="Structure">
@@ -77,7 +77,7 @@ see Structure [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_1812
 
 ## jsBench
 
-```text
+```javascript
 see Test [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/P7jsBecnhEntirePage.JPG)
 <p align="center">
 <img src="./P7jsBecnhEntirePage.JPG" width="800" alt="jsBench">
@@ -86,14 +86,14 @@ see Test [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/
 
 ## Légendes
 
-```text
+```javascript
 - Code Block1 : boucles for... et conditions if... else if...
 - Code Block2 : fonctions natives foreach...map...filter...
 ```
 
 ## Axes d'amélioration
 
-```text
+```javascript
 - Utiliser des slides pour votre présentation
 - Revenir à la liste des recettes precedentes lorsqu'on supprime un tag
 - Pensez au responsive
