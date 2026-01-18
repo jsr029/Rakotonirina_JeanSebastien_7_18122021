@@ -102,3 +102,41 @@ see Test [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/
 - Revoir les algorigrammes
 - Revoir l'utilisation de classe (Majuscule au debut du nom de la classe et du fichier)
 ```
+
+## Structure Refractorisée
+
+```javascript
+les-petits-plats/
+├── index.html
+├── favicon.ico
+├── assets/
+│   ├── img/
+│   │   ├── Logo.png
+│   │   └── (éventuelles photos de recettes si tu les ajoutes plus tard)
+│   └── fonts/
+│       ├── DM-Sans-Regular.ttf
+│       ├── DM-Sans-Medium.ttf
+│       ├── DM-Sans-Bold.ttf
+│       └── (éventuellement autres variantes)
+├── json/
+│   └── recipes.json
+├── css/
+│   └── style.css           ← fichier compilé (ne pas éditer directement)
+├── scss/
+│   ├── _base.scss
+│   ├── _variables.scss
+│   ├── _header.scss
+│   ├── _dropdown.scss
+│   ├── _tags.scss
+│   ├── _recipes.scss
+│   ├── _responsive.scss
+│   └── main.scss           ← fichier principal d'import
+├── js/
+│   ├── data.js             ← chargement + export des recettes (ou directement dans main)
+│   ├── search.js           ← l'algorithme de recherche principal
+│   ├── tags.js             ← gestion ajout/suppression tags + mise à jour suggestions
+│   ├── dropdown.js         ← ouverture/fermeture + recherche dans dropdowns
+│   ├── ui.js               ← mise à jour affichage recettes, tags, compteur
+│   └── main.js             ← orchestration + event listeners
+└── package.json            (optionnel – si tu utilises un watcher sass)
+```
