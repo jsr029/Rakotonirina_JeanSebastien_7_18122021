@@ -1,73 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les Petits Plats - Algorithme de recherche JS</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico">
-    <!-- FontAwesome CDN -->
-    <script src="https://kit.fontawesome.com/a773d24a5d.js" crossorigin="anonymous"></script>
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Les Petits Plats</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" href="favicon.ico"/>
+ </head>
 <body>
-    <div class="global">
-        <header class="entete">
-            <div class="entete_logo">
-                <img src="assets/img/Logo.png" alt="logo les petits plats">
-            </div>
-            <div class="entete_titre">
-                <h1>Les petits plats</h1>
-            </div>
-            <div class="entete_searchInput">
-                <input type="text" class="globalSearch" placeholder="Rechercher un ingrédient, un appareil ou un ustensile..." minlength="3">
-                <i class="fa fa-search"></i>
-            </div>
-        </header>
 
-        <main class="container">
-            <!-- Tags dynamiques -->
-            <div class="underSearch"></div>
+  <div class="container">
 
-            <!-- Dropdowns -->
-            <div class="dropdown">
-                <div class="dropdown-block ingredients">
-                    <div class="dropdown_ingredients-input">
-                        <input type="text" class="ingredientSearch" placeholder="Rechercher un ingrédient..." data-type="ingredients">
-                    </div>
-                    <h2><span>Ingrédients</span><i class="fa fa-chevron-down"></i></h2>
-                    <div class="dropdown_ingredients-list list"></div>
-                </div>
+    <header class="entete">
+      <div class="entete_logo">
+        <img src="assets/img/Logo.png" alt="Les Petits Plats">
+      </div>
+      <h1>Les petits plats</h1>
 
-                <div class="dropdown-block appliances">
-                    <div class="dropdown_appliance-input">
-                        <input type="text" class="applianceSearch" placeholder="Rechercher un appareil..." data-type="appliances">
-                    </div>
-                    <h2><span>Appareils</span><i class="fa fa-chevron-down"></i></h2>
-                    <div class="dropdown_appliance-list list"></div>
-                </div>
+      <div class="entete_searchInput">
+        <input type="search" class="globalSearch" placeholder="Rechercher une recette" aria-label="Recherche principale"/>
+        <i class="fa fa-search"></i>
+      </div>
+    </header>
 
-                <div class="dropdown-block ustensils">
-                    <div class="dropdown_ustensils-input">
-                        <input type="text" class="ustensilSearch" placeholder="Rechercher un ustensile..." data-type="ustensils">
-                    </div>
-                    <h2><span>Ustensiles</span><i class="fa fa-chevron-down"></i></h2>
-                    <div class="dropdown_ustensils-list list"></div>
-                </div>
-            </div>
+    <div class="tags-container"></div>
 
-            <div class="nbrRecipes"></div>
+    <div class="dropdown">
 
-            <!-- Recettes -->
-            <div class="recipes"></div>
-        </main>
+      <div class="dropdown-block ingredients">
+        <input type="text" class="search-in-dropdown" placeholder="Rechercher un ingrédient" data-type="ingredients" aria-label="Rechercher un ingrédient"/>
+        <h2><span>Ingrédients</span><i class="fa fa-chevron-down"></i></h2>
+        <div class="list ingredients-list"></div>
+      </div>
+
+      <div class="dropdown-block appliance">
+        <input type="text" class="search-in-dropdown" placeholder="Rechercher un appareil" data-type="appliances" aria-label="Rechercher un appareil"/>
+        <h2><span>Appareil</span><i class="fa fa-chevron-down"></i></h2>
+        <div class="list appliance-list"></div>
+      </div>
+
+      <div class="dropdown-block ustensils">
+        <input type="text" class="search-in-dropdown" placeholder="Rechercher un ustensile" data-type="ustensils" aria-label="Rechercher un ustensile"/>
+        <h2><span>Ustensiles</span><i class="fa fa-chevron-down"></i></h2>
+        <div class="list ustensils-list"></div>
+      </div>
+
     </div>
 
-    <!-- Scripts dans l'ORDRE EXACT -->
-    <script src="js/data.js"></script>
-    <script src="js/search.js"></script>
-    <script src="js/tags.js"></script>
-    <script src="js/dropdown.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/main.js"></script>
+    <div class="stats">
+      <span class="recipes-count">0 recettes</span>
+    </div>
+
+    <main class="recipes-grid"></main>
+
+  </div>
+<!-- Scripts dans CET ordre -->
+  <script src="js/data.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/tags.js"></script>
+  <script src="js/dropdown.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
