@@ -1,67 +1,58 @@
 function normalize(str) {
-    return str
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase()
-        .trim();
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 }
 
 function searchRecipes(query, selectedTags) {
-    if (!recipes.length) return [];
+  if (!recipes.length) return [];
 
-    const normalizedQuery = normalize(query);
-    const useTextSearch = normalizedQuery.length >= 3;
+  const q = normalize(query);
+  const useText = q.length >= 3;
 
-    return recipes.filter(recipe => {
-        // Filtre texte global (nom, description, ingrédients)
-        if (useTextSearch) {
-            const nameOk   = normalize(recipe.name).includes(normalizedQuery);
-            const descOk   = normalize(recipe.description).includes(normalizedQuery);
-            const ingOk    = recipe.ingredients.some(i => normalize(i.ingredient).includes(normalizedQuery));
+  return recipes.filter(r => {
 
-            if (!nameOk && !descOk && !ingOk) return false;
-        }
+    if (useText) {
+      if (normalize(r.name).includes(q)) return true;
+      if (normalize(r.description).includes(q)) return true;
+      if (r.ingredients.some(i => normalize(i.ingredient).includes(q))) return true;
+      return false;
+    }
 
-        // Filtre tags → TOUS les tags sélectionnés doivent matcher
-        for (const tag of selectedTags.ingredients) {
-            if (!recipe.ingredients.some(i => normalize(i.ingredient) === tag)) return false;
-        }
+    // Tags → intersection stricte
+    for (const tag of selectedTags.ingredients) {
+      if (!r.ingredients.some(i => normalize(i.ingredient) === tag)) return false;
+    }
+    for (const tag of selectedTags.appliances) {
+      if (normalize(r.appliance) !== tag) return false;
+    }
+    for (const tag of selectedTags.ustensils) {
+      if (!r.ustensils.some(u => normalize(u) === tag)) return false;
+    }
 
-        for (const tag of selectedTags.appliances) {
-            if (normalize(recipe.appliance) !== tag) return false;
-        }
-
-        for (const tag of selectedTags.ustensils) {
-            if (!recipe.ustensils.some(u => normalize(u) === tag)) return false;
-        }
-
-        return true;
-    });
+    return true;
+  });
 }
 
-function getSuggestions(filteredRecipes, selectedTags) {
-    const ingredients = new Set();
-    const appliances  = new Set();
-    const ustensils   = new Set();
+function getSuggestions(filtered, selected) {
+  const ing = new Set();
+  const app = new Set();
+  const ust = new Set();
 
-    filteredRecipes.forEach(recipe => {
-        recipe.ingredients.forEach(ing => {
-            const norm = normalize(ing.ingredient);
-            if (!selectedTags.ingredients.has(norm)) ingredients.add(ing.ingredient);
-        });
-
-        const appNorm = normalize(recipe.appliance);
-        if (!selectedTags.appliances.has(appNorm)) appliances.add(recipe.appliance);
-
-        recipe.ustensils.forEach(ust => {
-            const norm = normalize(ust);
-            if (!selectedTags.ustensils.has(norm)) ustensils.add(ust);
-        });
+  filtered.forEach(r => {
+    r.ingredients.forEach(i => {
+      const n = normalize(i.ingredient);
+      if (!selected.ingredients.has(n)) ing.add(i.ingredient);
     });
+    const a = normalize(r.appliance);
+    if (!selected.appliances.has(a)) app.add(r.appliance);
+    r.ustensils.forEach(u => {
+      const n = normalize(u);
+      if (!selected.ustensils.has(n)) ust.add(u);
+    });
+  });
 
-    return {
-        ingredients: [...ingredients].sort((a,b) => a.localeCompare(b)),
-        appliances:  [...appliances] .sort((a,b) => a.localeCompare(b)),
-        ustensils:   [...ustensils]  .sort((a,b) => a.localeCompare(b))
-    };
+  return {
+    ingredients: [...ing].sort((a,b)=>a.localeCompare(b)),
+    appliances:  [...app].sort((a,b)=>a.localeCompare(b)),
+    ustensils:   [...ust].sort((a,b)=>a.localeCompare(b))
+  };
 }
