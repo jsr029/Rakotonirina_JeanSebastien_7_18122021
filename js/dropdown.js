@@ -39,7 +39,8 @@ function initDropdowns() {
 
 function refreshDropdown(type, items) {
     const container = document.querySelector(`.dropdown-block.${type} .list`);
-    container.innerHTML = '';
+    //container.innerHTML = '';
+    container.textContent = '';
 
     items.forEach(item => {
         const el = document.createElement('div');
