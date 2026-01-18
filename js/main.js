@@ -1,21 +1,36 @@
-document.addEventListener('DOMContentLoaded', async () => {
-    await loadRecipes();
+// js/main.js – version robuste
 
-    if (recipes.length === 0) return;
+document.addEventListener('DOMContentLoaded', () => {
+    // Vérification existence des fonctions critiques
+    if (typeof loadRecipes !== 'function') {
+        console.error("loadRecipes n'est PAS défini → vérifie l'ordre des scripts !");
+        document.querySelector('.recipes-grid').innerHTML = '<p style="color:red">Erreur : scripts mal chargés (data.js manquant ?)</p>';
+        return;
+    }
 
-    // Initialisation
-    initDropdowns();
-    updateAll(); // affichage initial
+    if (typeof updateAll !== 'function') {
+        console.error("updateAll n'est PAS défini");
+        return;
+    }
 
-    // Recherche globale
-    const globalInput = document.querySelector('.globalSearch');
-    let debounceTimer;
+    // Lancement normal
+    loadRecipes().then(() => {
+        if (recipes.length === 0) {
+            console.warn("Aucune recette chargée");
+            return;
+        }
 
-    globalInput.addEventListener('input', () => {
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(updateAll, 300);
+        initDropdowns();
+        updateAll();
+
+        const globalInput = document.querySelector('.globalSearch');
+        let debounceTimer;
+
+        globalInput.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(updateAll, 300);
+        });
+
+        console.log(`Prêt – ${recipes.length} recettes chargées`);
     });
-
-    // Pour les tests rapides (optionnel)
-    console.log(`Projet chargé – ${recipes.length} recettes disponibles`);
 });
