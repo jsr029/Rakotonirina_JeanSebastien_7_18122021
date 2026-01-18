@@ -43,3 +43,39 @@ header.entete {
     }
   }
 }
+.dropdown-block {
+    position: relative;
+}
+
+.dropdown-block .list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 0 0 5px 5px;
+    max-height: 280px;
+    overflow-y: auto;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.dropdown-block.open .list {
+    display: block;
+}
+
+.dropdown-block h2 {
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.dropdown-block h2 i {
+    transition: transform 0.25s ease;
+}
+
+.dropdown-block.open h2 i {
+    transform: rotate(180deg);
+}
