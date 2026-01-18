@@ -43,6 +43,13 @@ header.entete {
     }
   }
 }
+.dropdown{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 15px;
+}
 .dropdown-block {
     position: relative;
 }
