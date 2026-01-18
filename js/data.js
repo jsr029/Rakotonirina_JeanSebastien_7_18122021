@@ -2,7 +2,7 @@ let recipes = [];
 
 async function loadRecipes() {
     try {
-        const response = await fetch('json/recipes.json');
+        const response = await fetch('./json/recipes.json');
         if (!response.ok) throw new Error("Erreur réseau");
         recipes = await response.json();
         return recipes;
