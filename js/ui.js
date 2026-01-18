@@ -1,6 +1,6 @@
 function refreshRecipesDisplay(filtered) {
     const grid = document.querySelector('.recipes-grid');
-    grig ? grid.innerHTML = '':'';
+    grid ? grid.innerHTML = '':'';
 
     if (filtered.length === 0) {
         grid.innerHTML = '<p style="grid-column: 1 / -1; text-align:center; padding:40px;">Aucune recette ne correspond à votre recherche</p>';
