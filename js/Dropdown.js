@@ -58,7 +58,7 @@ class Dropdown {
 
       input.style.display = 'block';
       list.style.display = 'grid';
-      h2.style.display = 'none'; // ou flex selon ton design
+      h2.style.display = 'flex'; // ou flex selon ton design
 
       icon.classList.remove('fa-angle-down');
       icon.classList.add('fa-angle-up');
