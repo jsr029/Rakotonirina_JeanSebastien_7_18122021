@@ -77,11 +77,12 @@ class Dropdown {
       //input.style.display = 'none';
       list.style.display = 'none';
       h2.style.display = 'flex';
-      span.style.display = 'none';
+      span.innerHTML = '';
       icon.classList.remove('fa-angle-up');
       icon.classList.add('fa-angle-down');
     });
   }
 }
 
-export default Dropdown;
+export default Dropdown;;
+
