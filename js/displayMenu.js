@@ -1,37 +1,64 @@
-// DisplayMenu.js
-import { currentRecipes } from './state.js';
+import DisplayTags from "./DisplayTags.js";
 
-export default class DisplayMenu {
-  render() {
-    const ingredients = new Set();
-    const appliances = new Set();
-    const ustensils  = new Set();
+class DisplayMenu {
+    render(data, input) {
+        let dropIList = document.querySelector('.dropdown_ingredients-list');
+        let boxIMenu = [];
+        let uniqboxIMenu = [];
+        let ingredientsTab = [];
 
-    currentRecipes.forEach(recipe => {
-      recipe.ingredients.forEach(ing => ingredients.add(ing.ingredient.trim()));
-      appliances.add(recipe.appliance.trim());
-      recipe.ustensils.forEach(u => ustensils.add(u.trim()));
-    });
+        let baseI = [];
+        let baseU = [];
+        let baseA = [];
+        /**Appliance */
+        let dropAList = document.querySelector('.dropdown_appliance-list');
+        let globalSearchA = document.querySelector('.globalSearch');
+        let boxAMenu = [];
+        let uniqboxAMenu = [];
+        let applianceTab = [];
+        /**Appliance end */
+        /**Ustensils */
+        let dropUList = document.querySelector('.dropdown_ustensils-list');
+        let boxUMenu = [];
+        let uniqboxUMenu = [];
+        let ustensilsTab = [];
+        /**Ustensils end */
+        for (let i = 0; i < data.length; i++) {
+            applianceTab.push(data[i].appliance.trim());
+            baseA.push(data[i]);
+            for (let j = 0; j < data[i].ingredients.length; j++) {
+                ingredientsTab.push(data[i].ingredients[j].ingredient.trim());
+                baseI.push(data[i]);
+            }
+            for (let j = 0; j < data[i].ustensils.length; j++) {
+                ustensilsTab.push(data[i].ustensils[j].trim());
+                baseU.push(data[i]);
+            }
+        }
+        uniqboxIMenu = [...new Set(ingredientsTab)];
+        uniqboxIMenu.sort();
+        uniqboxIMenu.forEach(elm => {
+            boxIMenu.push(`<a href="javascript:void(0)">${elm}</a>`);
+        });
+        dropIList.innerHTML = boxIMenu.join('');
+        /** Appliance */
+        uniqboxAMenu = [...new Set(applianceTab)];
+        uniqboxAMenu.sort();
+        uniqboxAMenu.forEach(elm => {
+            boxAMenu.push(`<a href="javascript:void(0)">${elm}</a>`);
+        });
+         dropAList.innerHTML = boxAMenu.join('');
+       /**Appliance end */
+        dropUList.innerHTML = boxUMenu.join('');
+        uniqboxUMenu = [...new Set(ustensilsTab)];
+        uniqboxUMenu.sort();
+        uniqboxUMenu.forEach(elm => {
+            boxUMenu.push(`<a href="javascript:void(0)">${elm}</a>`);
+        });
+        dropUList.innerHTML = boxUMenu.join('');
+        let baseTab = [...new Set([...baseU, ...baseI, ...baseA])];
+        new DisplayTags().render(baseTab);
+    }
 
-    // Ingrédients
-    const ingList = document.querySelector('.dropdown_ingredients-list');
-    ingList.innerHTML = [...ingredients]
-      .sort()
-      .map(item => `<a href="#" data-type="ingredient" data-value="${item}">${item}</a>`)
-      .join('');
-
-    // Appareils
-    const appList = document.querySelector('.dropdown_appliance-list');
-    appList.innerHTML = [...appliances]
-      .sort()
-      .map(item => `<a href="#" data-type="appliance" data-value="${item}">${item}</a>`)
-      .join('');
-
-    // Ustensiles
-    const ustList = document.querySelector('.dropdown_ustensils-list');
-    ustList.innerHTML = [...ustensils]
-      .sort()
-      .map(item => `<a href="#" data-type="ustensil" data-value="${item}">${item}</a>`)
-      .join('');
-  }
 }
+export default DisplayMenu;
