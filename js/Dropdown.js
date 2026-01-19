@@ -59,7 +59,6 @@ class Dropdown {
       input.style.display = 'block';
       list.style.display = 'grid';
       h2.style.display = 'flex'; // ou flex selon ton design
-      span.style.display = 'block';
 
       icon.classList.remove('fa-angle-down');
       icon.classList.add('fa-angle-up');
@@ -75,10 +74,10 @@ class Dropdown {
       const span = h2.querySelector('span');
       const icon = h2.querySelector('i');
 
-      //input.style.display = 'none';
+      input.style.display = 'none';
       list.style.display = 'none';
       h2.style.display = 'flex';
-      span.style.display = 'none';
+      span.style.display = 'inline';
       icon.classList.remove('fa-angle-up');
       icon.classList.add('fa-angle-down');
     });
