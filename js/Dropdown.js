@@ -59,6 +59,7 @@ class Dropdown {
       input.style.display = 'block';
       list.style.display = 'grid';
       h2.style.display = 'flex'; // ou flex selon ton design
+      span.innerHTML = this.dropdowns.find(d => d.container === `.${clickedContainer.classList[0]}`).title;
 
       icon.classList.remove('fa-angle-down');
       icon.classList.add('fa-angle-up');
@@ -84,5 +85,4 @@ class Dropdown {
   }
 }
 
-export default Dropdown;;
-
+export default Dropdown;
