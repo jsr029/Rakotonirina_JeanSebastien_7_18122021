@@ -74,10 +74,10 @@ class Dropdown {
       const span = h2.querySelector('span');
       const icon = h2.querySelector('i');
 
-      input.style.display = 'none';
+      //input.style.display = 'none';
       list.style.display = 'none';
       h2.style.display = 'flex';
-      span.style.display = 'inline';
+      span.style.display = 'none';
       icon.classList.remove('fa-angle-up');
       icon.classList.add('fa-angle-down');
     });
