@@ -45,9 +45,7 @@ Conclusion, j'ai toujours ce plaisir particulier, à découvrir chaque nouveau p
 
 ## Fiche d'investigation
 
-```text
 see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-1/Fiche.jpg)
-```
 
 ```javascript
 <p align="center">
@@ -57,9 +55,7 @@ see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_
 
 ## Algorigram
 
-```text
 see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/P7algorigram.png)
-```
 
 ```javascript
 <p align="center">
@@ -69,15 +65,12 @@ see documentation [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_
 
 ## Site
 
-```text
 see Demo [here](https://jsr029.github.io/Rakotonirina_JeanSebastien_7_18122021)
-```
 
 ## Structure
 
-```text
+
 see Structure [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/structure2.svg)
-```
 
 ```javascript
 <p align="center">
@@ -87,9 +80,7 @@ see Structure [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_1812
 
 ## jsBench
 
-```text
 see Test [here](https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021/tree/Algo-2/P7jsBecnhEntirePage.JPG)
-```
 
 ```javascript
 <p align="center">
